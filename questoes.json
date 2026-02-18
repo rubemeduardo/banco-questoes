@@ -1,166 +1,80 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Banco de Questões – Estudos para Concurso</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f6fa;
-  padding: 20px;
-}
-
-.questao {
-  background: #fff;
-  margin-bottom: 30px;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
-
-h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.meta {
-  font-size: 13px;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.enunciado {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.alternativa {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 10px;
-  display: flex;
-  gap: 10px;
-}
-
-.alternativa.selecionada { background: #e9fbe9; }
-.alternativa.correta { background: #c8f7c5; }
-.alternativa.incorreta { background: #ffd6d6; }
-.alternativa.errada {
-  text-decoration: line-through;
-  opacity: 0.7;
-}
-
-.marcar-errada {
-  cursor: pointer;
-  font-size: 18px;
-}
-
-button {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #3498db;
-  color: #fff;
-  margin-top: 10px;
-}
-
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-</style>
-</head>
-
-<body>
-
-<!-- QUESTÃO 1 -->
-<div class="questao" data-gabarito="D">
-<h2>Questão 1 – Direito Financeiro (LRF)</h2>
-<div class="meta">
-Ano: 2025 | Banca: FCC | Órgão: TRT – 2ª Região (SP)
-</div>
-
-<div class="enunciado">
-De acordo com a Lei de Responsabilidade Fiscal,
-</div>
-
-<div class="alternativa" data-opcao="A">
-<input type="radio" name="q1">
-<span>A) as despesas que constituam obrigações constitucionais e legais de um ente público só serão objeto de limitação de empenho caso as demais despesas já tenham sido limitadas em pelo menos 20%.</span>
-<span class="marcar-errada" onclick="this.parentElement.classList.toggle('errada')">❌</span>
-</div>
-
-<div class="alternativa" data-opcao="B">
-<input type="radio" name="q1">
-<span>B) devem ser excluídos da fixação da programação financeira os créditos adicionais e as operações extraorçamentárias, em especial os restos a pagar.</span>
-<span class="marcar-errada">❌</span>
-</div>
-
-<div class="alternativa" data-opcao="C">
-<input type="radio" name="q1">
-<span>C) a programação financeira e o cronograma mensal de desembolso devem ser elaborados pelo Poder Legislativo em até sessenta dias.</span>
-<span class="marcar-errada">❌</span>
-</div>
-
-<div class="alternativa" data-opcao="D">
-<input type="radio" name="q1">
-<span>D) se verificado, ao final de um bimestre, que a realização da receita poderá não comportar o cumprimento das metas, deverá ocorrer limitação de empenho.</span>
-<span class="marcar-errada">❌</span>
-</div>
-
-<div class="alternativa" data-opcao="E">
-<input type="radio" name="q1">
-<span>E) ocorrendo limitação de empenho, a recomposição das dotações dar-se-á sempre de forma integral.</span>
-<span class="marcar-errada">❌</span>
-</div>
-
-<button onclick="corrigir(this)">Corrigir</button>
-</div>
-
-<!-- QUESTÃO 2 -->
-<div class="questao">
-<h2>Questão 2 – Direito Constitucional (ADCT)</h2>
-<div class="meta">
-Ano: 2025 | Banca: FGV | Órgão: TCE-PE
-</div>
-
-<div class="enunciado">
-A Assembleia Legislativa do Estado Alfa aprovou lei estadual que concede redução de alíquota do ICMS incidente sobre bebidas fermentadas produzidas com matérias-primas regionais, com base em convênio de ICMS.
-<br><br>
-A norma não foi instruída com estudo de impacto orçamentário-financeiro nem acompanhada de medidas compensatórias.
-<br><br>
-À luz da legislação e da jurisprudência do STF, assinale a afirmativa correta.
-</div>
-
-<div class="alternativa"><input type="radio" name="q2"> A) A lei é inconstitucional por ausência de estudo de impacto.</div>
-<div class="alternativa"><input type="radio" name="q2"> B) Não há renúncia fiscal.</div>
-<div class="alternativa"><input type="radio" name="q2"> C) A falta de dotação só impede aplicação no exercício.</div>
-<div class="alternativa"><input type="radio" name="q2"> D) A regra do ADCT aplica-se apenas à União.</div>
-<div class="alternativa"><input type="radio" name="q2"> E) O convênio suprime o impacto fiscal.</div>
-
-<p><em>Gabarito ainda não informado.</em></p>
-</div>
-
-<script>
-function corrigir(botao) {
-  const questao = botao.closest(".questao");
-  const gabarito = questao.dataset.gabarito;
-  if (!gabarito) return;
-
-  const alternativas = questao.querySelectorAll(".alternativa");
-  alternativas.forEach(a => {
-    const radio = a.querySelector("input");
-    if (a.dataset.opcao === gabarito) a.classList.add("correta");
-    if (radio && radio.checked && a.dataset.opcao !== gabarito)
-      a.classList.add("incorreta");
-  });
-}
-</script>
-
-</body>
-</html>
+[
+  {
+    "id": 1,
+    "area": "Direito Financeiro",
+    "tema": "Lei de Responsabilidade Fiscal",
+    "subtema": "LC nº 101/2000",
+    "ano": 2025,
+    "banca": "FCC",
+    "orgao": "TRT – 2ª Região (SP)",
+    "prova": "FCC - 2025 - TRT - 2ª Região (SP) - Analista Judiciário",
+    "enunciado": "De acordo com a Lei de Responsabilidade Fiscal,",
+    "alternativas": {
+      "A": "as despesas que constituam obrigações constitucionais e legais de um ente público só serão objeto de limitação de empenho caso as demais despesas já tenham sido limitadas em pelo menos 20%.",
+      "B": "devem ser excluídos da fixação da programação financeira os créditos adicionais e as operações extraorçamentárias, em especial os restos a pagar.",
+      "C": "a programação financeira e o cronograma mensal de desembolso devem ser elaborados pelo Poder Legislativo em até sessenta dias após a publicação dos orçamentos.",
+      "D": "se verificado, ao final de um bimestre, que a realização da receita poderá não comportar o cumprimento das metas de resultados primário ou nominal, deverá ocorrer limitação de empenho.",
+      "E": "ocorrendo limitação de empenho, a recomposição das dotações cujos empenhos foram limitados dar-se-á sempre de forma integral."
+    },
+    "gabarito": "D",
+    "fonte_gabarito": "Art. 9º da Lei Complementar nº 101/2000",
+    "comentario_admin": "Questão literal da LRF. A alternativa D reproduz o comando do art. 9º.",
+    "estatisticas": {
+      "respondida": 0,
+      "acertos": 0,
+      "erros": 0
+    }
+  },
+  {
+    "id": 2,
+    "area": "Direito Constitucional",
+    "tema": "Ordem Econômica e Financeira",
+    "subtema": "Ato das Disposições Constitucionais Transitórias (ADCT)",
+    "ano": 2025,
+    "banca": "FGV",
+    "orgao": "TCE-PE",
+    "prova": "FGV - 2025 - TCE-PE - Auditor de Controle Externo – Contas Públicas",
+    "enunciado": "A Assembleia Legislativa do Estado Alfa aprovou lei estadual que concede redução de alíquota do ICMS incidente sobre bebidas fermentadas produzidas com matérias-primas regionais, com base em convênio de ICMS. A norma não foi instruída com estudo de impacto orçamentário-financeiro nem acompanhada de medidas compensatórias. À luz da legislação e da jurisprudência do Supremo Tribunal Federal, assinale a afirmativa correta.",
+    "alternativas": {
+      "A": "A lei deve ser instruída com estudo de impacto orçamentário-financeiro e acompanhada de medidas compensatórias, sob pena de inconstitucionalidade formal.",
+      "B": "A norma é formalmente válida, pois, tratando-se de arrecadação futura, não há renúncia fiscal.",
+      "C": "A ausência de dotação orçamentária prévia apenas impede a aplicação da norma no respectivo exercício financeiro.",
+      "D": "A norma do ADCT que prevê a estimativa do impacto orçamentário-financeiro aplica-se somente à União Federal.",
+      "E": "A celebração de convênio no CONFAZ suprime a exigência de estimativa de impacto fiscal."
+    },
+    "gabarito": "A",
+    "fonte_gabarito": "ADCT, art. 113 e jurisprudência do STF",
+    "comentario_admin": "O STF exige estimativa de impacto e medidas compensatórias para renúncia fiscal.",
+    "estatisticas": {
+      "respondida": 0,
+      "acertos": 0,
+      "erros": 0
+    }
+  },
+  {
+    "id": 3,
+    "area": "Administração Financeira e Orçamentária",
+    "tema": "Lei de Responsabilidade Fiscal",
+    "subtema": "Renúncia de Receita",
+    "ano": 2025,
+    "banca": "FGV",
+    "orgao": "TCE-PE",
+    "prova": "FGV - 2025 - TCE-PE - Analista de Controle Externo – Contas Públicas",
+    "enunciado": "Durante o processo de elaboração da proposta orçamentária anual, o Poder Executivo estadual previu uma significativa renúncia de receitas decorrente da ampliação de benefícios fiscais concedidos a determinados setores econômicos. Foi demonstrado que a renúncia foi acompanhada de estimativa do impacto orçamentário-financeiro e considerada na LOA, sem afetar as metas fiscais da LDO. Considerando as normas da Lei de Responsabilidade Fiscal, assinale a afirmativa correta.",
+    "alternativas": {
+      "A": "A concessão da renúncia é válida, ainda que não haja medidas compensatórias.",
+      "B": "A ausência de medidas compensatórias invalida a renúncia.",
+      "C": "A renúncia depende apenas de previsão na LOA.",
+      "D": "A validade depende exclusivamente de autorização legislativa.",
+      "E": "A concessão depende de aprovação do Senado Federal."
+    },
+    "gabarito": "A",
+    "fonte_gabarito": "Art. 14 da Lei Complementar nº 101/2000",
+    "comentario_admin": "A LRF admite renúncia sem compensação quando não há impacto nas metas fiscais.",
+    "estatisticas": {
+      "respondida": 0,
+      "acertos": 0,
+      "erros": 0
+    }
+  }
+]
