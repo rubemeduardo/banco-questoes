@@ -102,7 +102,35 @@
     "acertos": 0,
     "erros": 0
   }
+},
+  {
+  "id": 5,
+  "area": "Direito Constitucional",
+  "tema": "Ordem Econômica e Financeira",
+  "subtema": "Fundo de Participação dos Municípios (FPM) e Incentivos Fiscais",
+  "ano": 2025,
+  "banca": "FGV",
+  "orgao": "TCE-PE",
+  "prova": "FGV - 2025 - TCE-PE - Analista de Controle Externo – Contas Públicas",
+  "enunciado": "O Município Delta ajuizou ação contra a União, alegando que a concessão de isenções fiscais sobre o Imposto de Renda (IR) e o Imposto sobre Produtos Industrializados (IPI) vem diminuindo os valores a serem repassados ao Fundo de Participação dos Municípios (FPM), do qual faz parte. Com base na legislação e na jurisprudência do Supremo Tribunal Federal sobre o tema, assinale a afirmativa correta.",
+  "alternativas": {
+    "A": "A concessão de benefícios fiscais que reduzam o montante do IR e do IPI é inconstitucional, pois isso compromete a arrecadação municipal, repassada por meio do FPM, e viola a autonomia municipal.",
+    "B": "A concessão de incentivos fiscais pelo Poder Executivo depende de autorização dos entes federativos beneficiários do FPM, sob pena de inconstitucionalidade.",
+    "C": "A base de cálculo para o repasse ao FPM deve considerar o potencial de arrecadação do IR e do IPI, mesmo que parte da arrecadação tenha sido desonerada por incentivos fiscais.",
+    "D": "A concessão de incentivos fiscais federais não pode afetar os percentuais mínimos de aplicação obrigatória em educação e saúde pelos entes subnacionais.",
+    "E": "A concessão de isenções e benefícios fiscais pela União é constitucional, mesmo que implique na redução dos valores repassados aos municípios por meio do FPM, desde que sejam observados os limites legais e constitucionais."
+  },
+  "gabarito": "E",
+  "fonte_gabarito": "Jurisprudência do STF sobre FPM, IR e IPI",
+  "comentario_admin": "O STF entende que a União pode conceder isenções e benefícios fiscais relativos ao IR e ao IPI, ainda que isso reduza os valores repassados ao FPM, desde que respeitados os limites constitucionais.",
+  "estatisticas": {
+    "respondida": 0,
+    "acertos": 0,
+    "erros": 0
+  }
 }
 
+
 ]
+
 
