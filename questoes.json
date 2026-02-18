@@ -76,5 +76,33 @@
       "acertos": 0,
       "erros": 0
     }
+  },
+  {
+  "id": 4,
+  "area": "Direito Administrativo",
+  "tema": "Organização da Administração Pública",
+  "subtema": "Empresas Estatais e Precatórios",
+  "ano": 2025,
+  "banca": "FGV",
+  "orgao": "TCE-PE",
+  "prova": "FGV - 2025 - TCE-PE - Analista de Controle Externo – Contas Públicas",
+  "enunciado": "Uma empresa pública estadual pretende obter a prerrogativa de submeter o pagamento de suas dívidas judiciais ao regime de precatórios, nos termos do art. 100 da Constituição Federal. Para fundamentar seu pleito, invoca decisão do Supremo Tribunal Federal que reconheceu esse direito a entidades estatais que atendam critérios específicos. Com base na jurisprudência do STF, assinale a afirmativa correta.",
+  "alternativas": {
+    "A": "A empresa estatal não dependente, mesmo que concorra com o setor privado e distribua lucros, está sujeita ao regime de precatórios.",
+    "B": "A empresa estatal que obtenha lucros não pode se submeter ao regime constitucional de precatórios.",
+    "C": "A submissão ao regime de precatórios exige que a empresa estatal atue exclusivamente na prestação de serviços públicos essenciais, sem finalidade lucrativa e em regime não concorrencial.",
+    "D": "O regime de precatórios se aplica a todas as entidades da administração indireta, inclusive empresas públicas e sociedades de economia mista, independentemente de sua atividade.",
+    "E": "O regime de precatórios é aplicável a qualquer empresa controlada pelo Estado que preste serviços gratuitos à população, mesmo que tenha fins lucrativos e atue em regime concorrencial."
+  },
+  "gabarito": "C",
+  "fonte_gabarito": "Art. 100 da Constituição Federal e jurisprudência do STF (empresas estatais prestadoras de serviço público essencial)",
+  "comentario_admin": "O STF admite o regime de precatórios apenas para empresas estatais que prestem serviço público essencial, sem finalidade lucrativa e sem concorrência com o setor privado.",
+  "estatisticas": {
+    "respondida": 0,
+    "acertos": 0,
+    "erros": 0
   }
+}
+
 ]
+
