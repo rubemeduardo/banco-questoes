@@ -1,119 +1,109 @@
-// ===============================
-// CONTROLE DE MARCAÇÃO DE TEXTO
-// ===============================
-let corAtual = "highlight-yellow";
+document.addEventListener("DOMContentLoaded", () => {
 
-function setCor(cor) {
-  corAtual = cor;
-}
-
-function marcarPalavra() {
-  const selection = window.getSelection();
-  if (!selection || selection.rangeCount === 0) return;
-
-  const range = selection.getRangeAt(0);
-  if (range.collapsed) return;
-
-  const span = document.createElement("span");
-  span.className = corAtual;
-  span.style.padding = "2px 4px";
-  span.style.borderRadius = "4px";
-
-  range.surroundContents(span);
-  selection.removeAllRanges();
-}
-
-// ===============================
-// CARREGAMENTO DAS QUESTÕES
-// ===============================
-fetch("questoes.json")
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Não foi possível carregar questoes.json");
-    }
-    return response.json();
-  })
-  .then(questoes => {
-    const container = document.getElementById("questoes");
-
-    questoes.forEach((q, index) => {
-      const questaoDiv = document.createElement("div");
-      questaoDiv.className = "questao";
-
-      questaoDiv.innerHTML = `
-        <div class="meta">
-          <strong>${q.area}</strong> | ${q.tema}<br>
-          Ano: ${q.ano} | Banca: ${q.banca} | Órgão: ${q.orgao}
-        </div>
-
-        <div class="enunciado">
-          ${q.enunciado}
-        </div>
-
-        <div class="toolbar">
-          <span onclick="setCor('highlight-yellow')">🟨</span>
-          <span onclick="setCor('highlight-green')">🟩</span>
-          <span onclick="setCor('highlight-blue')">🟦</span>
-          <span onclick="marcarPalavra()">✏️</span>
-        </div>
-
-        <div class="alternativas">
-          ${Object.entries(q.alternativas).map(([letra, texto]) => `
-            <div class="alternativa" data-opcao="${letra}">
-              <span onclick="event.stopPropagation(); this.parentElement.classList.toggle('errada')">❌</span>
-              <strong>${letra})</strong> ${texto}
-            </div>
-          `).join("")}
-        </div>
-
-        <button onclick="responder(this, '${q.gabarito}')">Responder</button>
-
-        <div class="section"><strong>Fonte:</strong> ${q.fonte_gabarito || "—"}</div>
-        <div class="section"><strong>Comentário do administrador:</strong> ${q.comentario_admin || "—"}</div>
-
-        <div class="section">
-          <strong>Comentário do usuário:</strong>
-          <textarea placeholder="Digite sua anotação pessoal..."></textarea>
-        </div>
-
-        <div class="section"><strong>Estatísticas:</strong> em breve</div>
-      `;
-
-      // Clique para selecionar alternativa
-      questaoDiv.querySelectorAll(".alternativa").forEach(alt => {
-        alt.addEventListener("click", () => {
-          questaoDiv.querySelectorAll(".alternativa")
-            .forEach(a => a.classList.remove("selecionada"));
-          alt.classList.add("selecionada");
-        });
-      });
-
-      container.appendChild(questaoDiv);
-    });
-  })
-  .catch(error => {
-    console.error("Erro ao carregar as questões:", error);
-    alert("Erro ao carregar o banco de questões. Verifique o arquivo questoes.json.");
-  });
-
-// ===============================
-// FUNÇÃO DE RESPOSTA
-// ===============================
-function responder(botao, gabarito) {
-  const questao = botao.closest(".questao");
-  const selecionada = questao.querySelector(".alternativa.selecionada");
-
-  if (!selecionada) {
-    alert("Selecione uma alternativa.");
+  const container = document.getElementById("questoes");
+  if (!container) {
+    console.error("Div #questoes não encontrada");
     return;
   }
 
-  const opcaoEscolhida = selecionada.dataset.opcao;
+  let corAtual = "highlight-yellow";
 
-  if (opcaoEscolhida === gabarito) {
-    alert("✅ Resposta correta!");
-  } else {
-    alert(`❌ Resposta incorreta. Gabarito: ${gabarito}`);
+  function aplicarHighlight() {
+    const sel = window.getSelection();
+    if (!sel.rangeCount) return;
+    const range = sel.getRangeAt(0);
+    if (range.collapsed) return;
+
+    const span = document.createElement("span");
+    span.className = corAtual;
+    span.style.padding = "2px 4px";
+    span.style.borderRadius = "4px";
+
+    range.surroundContents(span);
+    sel.removeAllRanges();
   }
-}
 
+  fetch("questoes.json")
+    .then(res => res.json())
+    .then(questoes => {
+      questoes.forEach(q => {
+        const div = document.createElement("div");
+        div.className = "questao";
+
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.innerHTML = `<strong>${q.area}</strong> | ${q.tema} <br>
+                          Ano: ${q.ano} | Banca: ${q.banca} | Órgão: ${q.orgao}`;
+
+        const enunciado = document.createElement("div");
+        enunciado.className = "enunciado";
+        enunciado.textContent = q.enunciado;
+
+        const toolbar = document.createElement("div");
+        toolbar.className = "toolbar";
+
+        const cores = [
+          ["🟨", "highlight-yellow"],
+          ["🟩", "highlight-green"],
+          ["🟦", "highlight-blue"]
+        ];
+
+        cores.forEach(([emoji, cor]) => {
+          const btn = document.createElement("span");
+          btn.textContent = emoji;
+          btn.onclick = () => corAtual = cor;
+          toolbar.appendChild(btn);
+        });
+
+        const marcador = document.createElement("span");
+        marcador.textContent = "✏️";
+        marcador.onclick = aplicarHighlight;
+        toolbar.appendChild(marcador);
+
+        div.appendChild(meta);
+        div.appendChild(enunciado);
+        div.appendChild(toolbar);
+
+        Object.entries(q.alternativas).forEach(([letra, texto]) => {
+          const alt = document.createElement("div");
+          alt.className = "alternativa";
+          alt.dataset.opcao = letra;
+
+          const x = document.createElement("span");
+          x.textContent = "❌";
+          x.onclick = e => {
+            e.stopPropagation();
+            alt.classList.toggle("errada");
+          };
+
+          const txt = document.createElement("span");
+          txt.innerHTML = `<strong>${letra})</strong> ${texto}`;
+
+          alt.appendChild(x);
+          alt.appendChild(txt);
+
+          alt.onclick = () => {
+            div.querySelectorAll(".alternativa")
+              .forEach(a => a.classList.remove("selecionada"));
+            alt.classList.add("selecionada");
+          };
+
+          div.appendChild(alt);
+        });
+
+        const btnResp = document.createElement("button");
+        btnResp.textContent = "Responder";
+        btnResp.onclick = () => {
+          alert("Gabarito: " + q.gabarito);
+        };
+
+        div.appendChild(btnResp);
+        container.appendChild(div);
+      });
+    })
+    .catch(err => {
+      console.error("Erro ao renderizar questões:", err);
+      alert("Erro ao carregar as questões. Veja o console.");
+    });
+
+});
