@@ -2,14 +2,41 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Plataforma de Questões</title>
+<title>Questões para Estudo</title>
 
 <style>
-body { font-family: Arial, sans-serif; margin: 20px; }
-.questao { border: 1px solid #ccc; padding: 15px; margin-bottom: 25px; border-radius: 8px; }
-.alternativa { padding: 6px; margin: 5px 0; cursor: pointer; border-radius: 4px; }
-.alternativa.selecionada { background-color: #e3f2fd; }
-.alternativa.errada { text-decoration: line-through; color: #b00020; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.questao {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.meta {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.enunciado {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.toolbar {
+  margin-bottom: 15px;
+}
 
 .toolbar span {
   cursor: pointer;
@@ -17,14 +44,55 @@ body { font-family: Arial, sans-serif; margin: 20px; }
   margin-right: 8px;
 }
 
-.highlight-yellow { background: yellow; }
-.highlight-green { background: lightgreen; }
-.highlight-blue { background: lightblue; }
+.highlight-yellow { background: #fff59d; }
+.highlight-green  { background: #c8e6c9; }
+.highlight-blue   { background: #bbdefb; }
 
-button { margin-top: 10px; padding: 6px 12px; cursor: pointer; }
+.alternativa {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
 
-.meta { font-size: 0.9em; color: #555; margin-bottom: 10px; }
-.section { margin-top: 8px; font-size: 0.9em; }
+.alternativa.selecionada {
+  background: #e3f2fd;
+}
+
+.alternativa.errada {
+  text-decoration: line-through;
+  opacity: 0.7;
+  background: #ffecec;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #1976d2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 12px;
+  font-size: 0.9em;
+  color: #444;
+}
+
+textarea {
+  width: 100%;
+  min-height: 60px;
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 </style>
 </head>
 
@@ -32,8 +100,11 @@ button { margin-top: 10px; padding: 6px 12px; cursor: pointer; }
 
 <h1>Questões para Estudo</h1>
 
+<!-- CONTAINER ONDE AS QUESTÕES SERÃO INSERIDAS -->
 <div id="questoes"></div>
 
+<!-- CHAMADA DO JAVASCRIPT -->
 <script src="app.js"></script>
+
 </body>
 </html>
