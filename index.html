@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Plataforma de Questões</title>
+
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+.questao { border: 1px solid #ccc; padding: 15px; margin-bottom: 25px; border-radius: 8px; }
+.alternativa { padding: 6px; margin: 5px 0; cursor: pointer; border-radius: 4px; }
+.alternativa.selecionada { background-color: #e3f2fd; }
+.alternativa.errada { text-decoration: line-through; color: #b00020; }
+
+.toolbar span {
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.highlight-yellow { background: yellow; }
+.highlight-green { background: lightgreen; }
+.highlight-blue { background: lightblue; }
+
+button { margin-top: 10px; padding: 6px 12px; cursor: pointer; }
+
+.meta { font-size: 0.9em; color: #555; margin-bottom: 10px; }
+.section { margin-top: 8px; font-size: 0.9em; }
+</style>
+</head>
+
+<body>
+
+<h1>Questões para Estudo</h1>
+
+<div id="questoes"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
