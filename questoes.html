@@ -10,6 +10,18 @@
 
 <h1>Questões para Estudo</h1>
 
+<!-- AVISO DE MARCAÇÃO -->
+<p class="aviso-marcacao">
+  👉 Selecione um trecho do texto e clique em uma cor para marcar.
+</p>
+
+<!-- TOOLBAR DE CORES -->
+<div class="toolbar">
+  <span class="cor yellow" onclick="aplicarMarcacao('yellow')">🟨</span>
+  <span class="cor green" onclick="aplicarMarcacao('green')">🟩</span>
+  <span class="cor blue" onclick="aplicarMarcacao('blue')">🟦</span>
+</div>
+
 <!-- FILTROS -->
 <div class="filtros">
   <button onclick="filtrarQuestoes('todas')">Todas</button>
@@ -17,7 +29,7 @@
   <button onclick="filtrarQuestoes('nao')">Não respondidas</button>
 </div>
 
-<!-- CONTAINER DAS QUESTÕES -->
+<!-- QUESTÕES -->
 <div id="questoes"></div>
 
 <script src="app.js" defer></script>
