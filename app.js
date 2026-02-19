@@ -49,10 +49,15 @@ async function carregarQuestoes() {
             .map((texto, index) => {
               const letra = ["A", "B", "C", "D", "E"][index];
               return `
-                <label class="alternativa">
-                  <input type="radio" name="questao-${q.id}" value="${letra}">
-                  <span><strong>${letra})</strong> ${texto}</span>
-                </label>
+                <div class="alternativas">
+                  ${Object.entries(q.alternativas).map(([letra, texto]) => `
+                    <div class="alternativa">
+                      <input type="radio" name="questao-${q.id}" value="${letra}">
+                      <span class="texto"><strong>${letra})</strong> ${texto}</span>
+                      <span class="btn-x" onclick="toggleTachado(this)">✖</span>
+                    </div>
+                  `).join("")}
+                </div>
               `;
             }).join("")}
         </div>
@@ -111,3 +116,4 @@ function destacarPalavras(texto) {
   });
   return resultado;
 }
+
