@@ -116,4 +116,8 @@ function destacarPalavras(texto) {
   });
   return resultado;
 }
+function toggleTachado(botaoX) {
+  botaoX.closest(".alternativa").classList.toggle("tachada");
+}
+
 
