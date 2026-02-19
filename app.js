@@ -2,12 +2,29 @@ document.addEventListener("DOMContentLoaded", () => {
   carregarQuestoes();
 });
 
+// Palavras-chave que serão destacadas no enunciado
+const PALAVRAS_CHAVE = [
+  "Lei de Responsabilidade Fiscal",
+  "LRF",
+  "receita",
+  "despesa",
+  "orçamento",
+  "calamidade pública",
+  "pessoal",
+  "gabarito",
+  "percentual",
+  "limite",
+  "classificação",
+  "investimento",
+  "transferência",
+  "corrente",
+  "capital"
+];
+
 async function carregarQuestoes() {
   try {
     const response = await fetch("questoes.json");
     const data = await response.json();
-
-    // Aceita JSON direto ou em lote { questoes: [] }
     const questoes = Array.isArray(data) ? data : data.questoes || [];
 
     const container = document.getElementById("questoes");
@@ -17,12 +34,15 @@ async function carregarQuestoes() {
       const questaoDiv = document.createElement("div");
       questaoDiv.className = "questao";
 
+      const enunciadoDestacado = destacarPalavras(q.enunciado);
+
       questaoDiv.innerHTML = `
         <div class="cabecalho-questao">
           <span class="id-questao">Questão ${q.id}</span>
+          <span class="marcar-errada" title="Marcar para revisão">✖</span>
         </div>
 
-        <p class="enunciado"><strong>${q.enunciado}</strong></p>
+        <p class="enunciado"><strong>${enunciadoDestacado}</strong></p>
 
         <div class="alternativas">
           ${Object.values(q.alternativas)
@@ -30,16 +50,11 @@ async function carregarQuestoes() {
               const letra = ["A", "B", "C", "D", "E"][index];
               return `
                 <label class="alternativa">
-                  <input 
-                    type="radio" 
-                    name="questao-${q.id}" 
-                    value="${letra}"
-                  >
+                  <input type="radio" name="questao-${q.id}" value="${letra}">
                   <span><strong>${letra})</strong> ${texto}</span>
                 </label>
               `;
-            })
-            .join("")}
+            }).join("")}
         </div>
 
         <button class="btn-responder" onclick="responder(${q.id}, '${q.gabarito}')">
@@ -49,13 +64,16 @@ async function carregarQuestoes() {
         <div class="resultado" id="resultado-${q.id}"></div>
       `;
 
+      // Evento do X
+      questaoDiv.querySelector(".marcar-errada").addEventListener("click", () => {
+        questaoDiv.classList.toggle("questao-tachada");
+      });
+
       container.appendChild(questaoDiv);
     });
 
   } catch (erro) {
     console.error("Erro ao carregar questões:", erro);
-    document.getElementById("questoes").innerHTML =
-      "<p>Erro ao carregar as questões.</p>";
   }
 }
 
@@ -64,9 +82,7 @@ function responder(idQuestao, gabarito) {
   let selecionada = null;
 
   alternativas.forEach(opcao => {
-    if (opcao.checked) {
-      selecionada = opcao.value;
-    }
+    if (opcao.checked) selecionada = opcao.value;
   });
 
   const resultadoDiv = document.getElementById(`resultado-${idQuestao}`);
@@ -84,4 +100,14 @@ function responder(idQuestao, gabarito) {
     resultadoDiv.innerHTML =
       `<span style='color: red; font-weight: bold;'>✘ Resposta incorreta. Gabarito: ${gabarito}</span>`;
   }
+}
+
+// Destaque de palavras-chave
+function destacarPalavras(texto) {
+  let resultado = texto;
+  PALAVRAS_CHAVE.forEach(palavra => {
+    const regex = new RegExp(`\\b(${palavra})\\b`, "gi");
+    resultado = resultado.replace(regex, `<mark>$1</mark>`);
+  });
+  return resultado;
 }
