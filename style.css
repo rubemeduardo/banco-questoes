@@ -8,15 +8,40 @@ h1 {
   text-align: center;
 }
 
+.filtros {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filtros button {
+  margin: 0 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #455a64;
+  color: #fff;
+  cursor: pointer;
+}
+
 .questao {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 30px;
 }
 
-.meta {
+.questao-correta {
+  border-left: 6px solid #2e7d32;
+  background: #f1f8f4;
+}
+
+.questao-errada {
+  border-left: 6px solid #c62828;
+  background: #fff5f5;
+}
+
+.cabecalho-questao {
   font-size: 0.9em;
   color: #555;
   margin-bottom: 10px;
@@ -31,46 +56,39 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 10px;
-  margin-bottom: 6px;
-  border: 1px solid #ddd;
+  padding: 6px 8px;
+  margin: 4px 0;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.alternativa.selecionada {
-  background: #e3f2fd;
+.alternativa:hover {
+  background-color: #f6f6f6;
 }
 
-.alternativa.correta {
-  background: #c8e6c9;
-}
-
-.alternativa.errada {
-  background: #ffcdd2;
-}
-
-.texto {
+.alternativa .texto {
   flex: 1;
+  margin-left: 6px;
 }
 
-.marcar-errada {
+.alternativa .btn-x {
   visibility: hidden;
   color: #b00020;
+  font-weight: bold;
   cursor: pointer;
   margin-left: 10px;
 }
 
-.alternativa:hover .marcar-errada {
+.alternativa:hover .btn-x {
   visibility: visible;
 }
 
 .alternativa.tachada .texto {
   text-decoration: line-through;
-  opacity: 0.6;
+  color: #999;
 }
 
-button {
+button.btn-responder {
   margin-top: 10px;
   padding: 8px 14px;
   border: none;
@@ -80,6 +98,7 @@ button {
   cursor: pointer;
 }
 
-.highlight-yellow { background: #fff59d; }
-.highlight-green  { background: #c8e6c9; }
-.highlight-blue   { background: #bbdefb; }
+.resultado {
+  margin-top: 10px;
+  font-weight: bold;
+}
