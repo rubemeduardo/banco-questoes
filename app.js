@@ -1,32 +1,35 @@
-document.addEventListener("DOMContentLoaded", carregarQuestoes);
+document.addEventListener("keydown", function (e) {
+  if (!e.altKey) return;
 
-async function carregarQuestoes() {
-  const response = await fetch("questoes.json");
-  const data = await response.json();
-  const questoes = Array.isArray(data) ? data : data.questoes;
+  let classe = null;
 
-  const container = document.getElementById("questoes");
-  container.innerHTML = "";
+  if (e.key === "1") classe = "highlight-yellow";
+  if (e.key === "2") classe = "highlight-green";
+  if (e.key === "3") classe = "highlight-blue";
 
-  questoes.forEach(q => {
-    const div = document.createElement("div");
-    div.className = "questao";
+  if (!classe) return;
 
-    div.innerHTML = `
-      <div class="meta">Questão ${q.id}</div>
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return;
 
-      <p class="enunciado"><strong>${q.enunciado}</strong></p>
+  const range = selection.getRangeAt(0);
+  if (range.collapsed) return;
 
-      <div class="alternativas">
-        ${renderizarAlternativas(q)}
-      </div>
+  const span = document.createElement("span");
+  span.className = classe;
 
-      <button onclick="responder(${q.id}, '${q.gabarito}')">
-        Responder
-      </button>
+  try {
+    range.surroundContents(span);
+    selection.removeAllRanges();
+  } catch (err) {
+    // fallback seguro (quando o range cruza múltiplos nós)
+    const fragment = range.extractContents();
+    span.appendChild(fragment);
+    range.insertNode(span);
+    selection.removeAllRanges();
+  }
+});
 
-      <div class="resultado" id="resultado-${q.id}"></div>
-    `;
 
     container.appendChild(div);
   });
@@ -105,3 +108,4 @@ document.addEventListener("keydown", function (e) {
                                  "#bbdefb"
   );
 });
+
