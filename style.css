@@ -105,43 +105,40 @@ h1 {
   margin-top: 10px;
 }
 
+/* =========================
+   SELEÇÃO E CORREÇÃO
+========================= */
+
 .alternativa {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 6px 8px;
-  margin: 4px 0;
-  border-radius: 6px;
-  cursor: pointer;
   border: 1px solid #ddd;
-}
-
-.alternativa:hover {
-  background-color: #f6f6f6;
-}
-
-.alternativa .texto {
-  flex: 1;
-  margin-left: 6px;
-}
-
-/* X de tachar alternativa */
-.alternativa .btn-x {
-  visibility: hidden;
-  color: #b00020;
-  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
   cursor: pointer;
-  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: background-color 0.2s, border 0.2s;
 }
 
-.alternativa:hover .btn-x {
-  visibility: visible;
+.alternativa.selecionada {
+  background-color: #e3f2fd;
+  border-color: #1976d2;
+}
+
+.alternativa.correta {
+  background-color: #c8e6c9;
+  border-color: #2e7d32;
+}
+
+.alternativa.errada {
+  background-color: #ffcdd2;
+  border-color: #c62828;
 }
 
 .alternativa.tachada .texto {
   text-decoration: line-through;
-  color: #999;
-  background: #ffecec;
+  color: #888;
 }
 
 /* =====================
