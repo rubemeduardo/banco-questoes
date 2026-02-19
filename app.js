@@ -1,3 +1,9 @@
+const perfil = localStorage.getItem("perfil");
+
+if (!perfil) {
+  window.location.href = "index.html";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   carregarQuestoes();
 });
@@ -162,3 +168,4 @@ document.addEventListener("keydown", function (e) {
 
   selection.removeAllRanges();
 });
+
