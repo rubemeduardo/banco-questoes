@@ -65,17 +65,35 @@ function selecionarAlternativa(div) {
 
 /* ===== RESPONDER ===== */
 function responder(idQuestao, gabarito) {
-  const questao = document.querySelector(
-    `.questao .alternativas .alternativa.selecionada`
+  const questaoDiv = document.querySelector(
+    `.questao:has(.alternativas .alternativa[data-questao="${idQuestao}"])`
+  );
+
+  const alternativaSelecionada = questaoDiv.querySelector(
+    ".alternativa.selecionada"
   );
 
   const resultadoDiv = document.getElementById(`resultado-${idQuestao}`);
 
-  if (!questao) {
+  if (!alternativaSelecionada) {
     resultadoDiv.innerHTML =
       "<span style='color: orange;'>Selecione uma alternativa.</span>";
     return;
   }
+
+  const letra = alternativaSelecionada.dataset.letra;
+
+  if (letra === gabarito) {
+    alternativaSelecionada.classList.add("correta");
+    resultadoDiv.innerHTML =
+      "<span style='color: green; font-weight: bold;'>✔ Resposta correta</span>";
+  } else {
+    alternativaSelecionada.classList.add("errada");
+    resultadoDiv.innerHTML =
+      `<span style='color: red; font-weight: bold;'>✘ Resposta incorreta. Gabarito: ${gabarito}</span>`;
+  }
+}
+
 
   const letra = questao.dataset.letra;
 
@@ -95,3 +113,4 @@ function toggleTachado(event, botao) {
   event.stopPropagation();
   botao.closest(".alternativa").classList.toggle("tachada");
 }
+
