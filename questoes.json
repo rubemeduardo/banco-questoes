@@ -2143,13 +2143,265 @@
       "Identifica o agente responsável."
     ],
     "gabarito": "D"
+  },
+  {
+    "id": 141,
+    "tipo": "multipla",
+    "enunciado": "De acordo com o Manual Técnico de Orçamento (MTO), o programa de trabalho que define qualitativamente a programação orçamentária deve responder, de maneira clara e objetiva, às perguntas clássicas que caracterizam o ato de orçar. Nesse sentido, a classificação funcional deve responder à seguinte pergunta:",
+    "alternativas": [
+      "Quem é o responsável por fazer?",
+      "Qual é a localização geográfica da ação?",
+      "Em que áreas de despesa a ação governamental será realizada?",
+      "O que se pretende alcançar com a implementação da Política Pública?",
+      "O que será desenvolvido para alcançar o objetivo do programa?"
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 142,
+    "tipo": "multipla",
+    "enunciado": "Uma sociedade empresária possui participação acionária de 1% no capital social de um fornecedor, com o único objetivo de facilitar a compra de matéria-prima. A flutuação no valor justo dessas ações deve ser apresentada na seguinte conta do balanço patrimonial:",
+    "alternativas": [
+      "Reserva de lucros.",
+      "Reserva de capital.",
+      "Ações em Tesouraria.",
+      "Reserva de Lucros a Realizar.",
+      "Ajustes de avaliação patrimonial."
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 143,
+    "tipo": "multipla",
+    "enunciado": "Um instrumento de planejamento referente ao exercício financeiro fixa despesas para a ação “4578 — Assistência jurídica a pessoas em situação de vulnerabilidade financeira”. Quanto à classificação por estrutura programática e de acordo com o MCASP, essa ação é",
+    "alternativas": [
+      "uma despesa corrente.",
+      "uma despesa judiciária.",
+      "um projeto.",
+      "uma atividade.",
+      "uma operação especial."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 144,
+    "tipo": "multipla",
+    "enunciado": "De acordo com o MCASP, a natureza de informação de controle registra, processa e evidencia os atos de gestão com função específica de controle, bem como aqueles",
+    "alternativas": [
+      "cujos efeitos são apenas de longo prazo.",
+      "relacionados ao planejamento e à execução orçamentária.",
+      "cujos efeitos possam produzir modificações no patrimônio da entidade do setor público.",
+      "relacionados com a composição do patrimônio público."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 145,
+    "tipo": "multipla",
+    "enunciado": "Uma entidade do setor público apresentou diversas receitas de capital. O montante assinalado como “Outras Receitas de Capital” será de",
+    "alternativas": [
+      "R$ 670.000",
+      "R$ 730.000",
+      "R$ 830.000",
+      "R$ 1.070.000",
+      "R$ 1.150.000"
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 146,
+    "tipo": "multipla",
+    "enunciado": "No balanço patrimonial, quando o efeito não é considerado relevante, devem ser ajustados a valor presente os elementos do ativo decorrentes de operações",
+    "alternativas": [
+      "de longo prazo, apenas.",
+      "de curto e de longo prazo.",
+      "que resultam na compra de investimentos.",
+      "que resultam na compra de ativos imobilizados.",
+      "que têm como contrapartida obrigações de curto e de longo prazo."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 147,
+    "tipo": "multipla",
+    "enunciado": "Em relação às despesas públicas, são despesas correntes",
+    "alternativas": [
+      "os investimentos.",
+      "as despesas de custeio.",
+      "as inversões financeiras.",
+      "a aquisição de imóveis.",
+      "a constituição de Fundos Rotativos."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 148,
+    "tipo": "multipla",
+    "enunciado": "Em uma entidade do setor público, a amortização e os juros da dívida pública são classificados, respectivamente, como",
+    "alternativas": [
+      "investimentos e despesas de custeio.",
+      "inversões financeiras e despesas de custeio.",
+      "transferências de capital e despesas de custeio.",
+      "transferências de capital e transferências correntes.",
+      "inversões financeiras e transferências correntes."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 149,
+    "tipo": "multipla",
+    "enunciado": "Em relação à distinção entre registro orçamentário e extraorçamentário, assinale a opção correta.",
+    "alternativas": [
+      "Extraorçamentário: derivam de emissão de empenho.",
+      "Extraorçamentário: representam desembolsos de recursos de terceiros em poder do ente público.",
+      "Orçamentário: pagamentos de salário-maternidade.",
+      "Orçamentário: recolhimento de consignações.",
+      "Orçamentário: pagamento de ARO."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 150,
+    "tipo": "multipla",
+    "enunciado": "No ano, as despesas orçamentárias de capital apresentavam o seguinte saldo:",
+    "alternativas": [
+      "R$ 130.000",
+      "R$ 210.000",
+      "R$ 270.000",
+      "R$ 300.000",
+      "R$ 390.000"
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 151,
+    "tipo": "multipla",
+    "enunciado": "Assinale a opção que apresenta a diferença entre despesas correntes e despesas de capital.",
+    "alternativas": [
+      "Correntes incluem investimentos; capital inclui pessoal.",
+      "Capital é custeio; corrente é dívida.",
+      "Capital é serviços; corrente é ativos.",
+      "Correntes mantêm atividades; capital refere-se a investimentos e amortização da dívida.",
+      "Correntes são transferências; capital é curto prazo."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 152,
+    "tipo": "multipla",
+    "enunciado": "A despesa registrada sob o código 3.1.90.11.00 corresponde a",
+    "alternativas": [
+      "Despesa de capital.",
+      "Inversão financeira.",
+      "Despesa com pessoal e encargos sociais.",
+      "Transferência aos municípios.",
+      "Juros e encargos da dívida."
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 153,
+    "tipo": "multipla",
+    "enunciado": "O valor da reversão da redução ao valor recuperável é de",
+    "alternativas": [
+      "4.600",
+      "20.400",
+      "23.400",
+      "45.400",
+      "115.000"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 154,
+    "tipo": "multipla",
+    "enunciado": "Segundo normas gerais, despesas correntes e de capital são classificadas conforme",
+    "alternativas": [
+      "seu critério de execução.",
+      "sua atividade de programação.",
+      "sua categoria programática.",
+      "seu programa funcional.",
+      "sua natureza."
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 155,
+    "tipo": "multipla",
+    "enunciado": "As afirmativas sobre classificação por natureza da despesa são, respectivamente:",
+    "alternativas": [
+      "F – V – F",
+      "V – V – F",
+      "V – F – F",
+      "F – V – V",
+      "V – F – V"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 156,
+    "tipo": "multipla",
+    "enunciado": "O instrumento de programação contínua e permanente é denominado",
+    "alternativas": [
+      "atividade.",
+      "projeto.",
+      "subfunções.",
+      "funções.",
+      "programa."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 157,
+    "tipo": "multipla",
+    "enunciado": "Segundo a NBC TG 48, o tratamento contábil mais adequado para o investimento descrito é",
+    "alternativas": [
+      "Custo com resultado.",
+      "Custo corrigido com resultado.",
+      "Equivalência patrimonial.",
+      "Custo com ORA.",
+      "Valor justo com ORA."
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 158,
+    "tipo": "multipla",
+    "enunciado": "As despesas de custeio estão classificadas economicamente como",
+    "alternativas": [
+      "investimentos.",
+      "de capital.",
+      "inversões financeiras.",
+      "correntes.",
+      "transferências de capital."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 159,
+    "tipo": "multipla",
+    "enunciado": "O risco inerente, no contexto da auditoria, é aquele que",
+    "alternativas": [
+      "depende da tolerância ao risco da organização.",
+      "refere-se à possibilidade de distorção relevante antes dos controles.",
+      "é mensurado após avaliação dos controles.",
+      "pressupõe inexistência de controles.",
+      "decorre da falta de evidências."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 160,
+    "tipo": "multipla",
+    "enunciado": "O Plano de Contas Aplicado ao Setor Público dispõe que",
+    "alternativas": [
+      "as contas orçamentárias têm maior detalhamento.",
+      "o nível de detalhamento depende da natureza da informação.",
+      "o quinto nível patrimonial não pode ser detalhado.",
+      "entes não podem criar níveis adicionais.",
+      "todas as contas podem ser detalhadas a partir do quarto nível."
+    ],
+    "gabarito": "B"
   }
 ]
-
-  
-  
-
-
-
-
 
