@@ -2402,6 +2402,238 @@
       "todas as contas podem ser detalhadas a partir do quarto nível."
     ],
     "gabarito": "B"
+  },
+  {
+    "id": 161,
+    "tipo": "multipla",
+    "enunciado": "Para iniciar a apuração de denúncias sobre destinação irregular de recursos do orçamento federal aplicados por outros entes da Federação em ações da área da cultura, a Secretaria de Orçamento Federal consultou a classificação da despesa da referida área por:",
+    "alternativas": [
+      "elemento de despesa",
+      "grupo de natureza de despesa",
+      "identificador de uso",
+      "modalidade de aplicação",
+      "órgão e unidade orçamentária"
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 162,
+    "tipo": "multipla",
+    "enunciado": "A concepção de orçamento como um plano financeiro global, que demonstra de forma completa e fidedigna as despesas autorizadas e os recursos para sua cobertura, está associada ao princípio orçamentário da:",
+    "alternativas": [
+      "equilíbrio",
+      "especificação",
+      "unidade",
+      "uniformidade",
+      "universalidade"
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 163,
+    "tipo": "multipla",
+    "enunciado": "No contexto da consolidação das contas públicas, segundo o PCASP, um tipo de transação que deve ser excluída da consolidação refere-se a:",
+    "alternativas": [
+      "alterações patrimoniais dentro de uma mesma entidade",
+      "variações patrimoniais referentes à transferência de ativos entre entidades públicas",
+      "registro e baixa de ativos em doações entre entes públicos",
+      "transações entre entidade do orçamento fiscal e empresa estatal independente",
+      "transações entre entidade do orçamento fiscal e entidade privada"
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 164,
+    "tipo": "multipla",
+    "enunciado": "Na Demonstração dos Fluxos de Caixa, os fluxos decorrentes de transações em moeda estrangeira devem ser convertidos para a moeda funcional da entidade utilizando-se a taxa de câmbio:",
+    "alternativas": [
+      "estipulada no contrato",
+      "média para transações semelhantes",
+      "da data da ocorrência do fluxo de caixa",
+      "de fechamento do exercício",
+      "média para itens monetários"
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 165,
+    "tipo": "multipla",
+    "enunciado": "As despesas públicas apresentadas segundo a classificação funcional, evidenciando as áreas de atuação governamental, constam no:",
+    "alternativas": [
+      "balanço financeiro",
+      "demonstrativo quadrimestral das despesas por função do RGF",
+      "quadro principal da DFC",
+      "detalhamento das VPD na DVP",
+      "quadro de desembolsos por função da DFC"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 166,
+    "tipo": "certo_errado",
+    "enunciado": "O impairment test é facultativo no caso de ativo intangível cuja vida útil não possa ser estabelecida de forma objetiva.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 167,
+    "tipo": "certo_errado",
+    "enunciado": "Para ativos intangíveis com vida útil definida, o impairment test deve ser realizado a cada dois exercícios financeiros, ainda que não haja indício de perda.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 168,
+    "tipo": "certo_errado",
+    "enunciado": "O impairment test é potencialmente aplicável a todos os itens do ativo imobilizado e do ativo intangível.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 169,
+    "tipo": "certo_errado",
+    "enunciado": "Se o valor em uso de um ativo for inferior ao seu valor líquido de venda, a perda por impairment deve ser calculada com base no valor em uso.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 170,
+    "tipo": "certo_errado",
+    "enunciado": "Ativos mensurados a valor justo estão sujeitos a ajustes decorrentes do teste de impairment.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 171,
+    "tipo": "certo_errado",
+    "enunciado": "A perda por impairment ocorre quando o maior valor entre o valor justo líquido de despesas de venda e o valor em uso for inferior ao valor contábil do ativo.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 172,
+    "tipo": "certo_errado",
+    "enunciado": "No PCASP, lançamentos patrimoniais não podem envolver contas de natureza orçamentária como contrapartida.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 173,
+    "tipo": "certo_errado",
+    "enunciado": "O valor em uso de um ativo corresponde a um valor presente que não é diretamente observável no mercado.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 174,
+    "tipo": "certo_errado",
+    "enunciado": "O valor recuperável de um ativo corresponde ao menor valor entre o custo de aquisição e o valor realizável líquido.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 175,
+    "tipo": "certo_errado",
+    "enunciado": "O PCASP assegura a segregação entre registros orçamentários e patrimoniais, exigindo o registro das variações patrimoniais pelo regime de competência.",
+    "alternativas": [
+      "Certo",
+      "Errado"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 176,
+    "tipo": "multipla",
+    "enunciado": "Assinale a opção correta quanto à correspondência entre contas do Plano de Contas Aplicado ao Setor Público (PCASP).",
+    "alternativas": [
+      "Classe 4 pode ter contrapartida na Classe 5",
+      "Classe 5 pode ter contrapartida na Classe 7",
+      "Classe 1 pode ter contrapartida na Classe 4",
+      "Classe 2 pode ter contrapartida na Classe 8",
+      "Classe 3 pode ter contrapartida na Classe 6"
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 177,
+    "tipo": "multipla",
+    "enunciado": "Sobre a classificação da despesa pública, assinale a opção correta.",
+    "alternativas": [
+      "Apenas o item I está certo",
+      "Apenas o item III está certo",
+      "Apenas os itens I e II estão certos",
+      "Apenas os itens II e III estão certos",
+      "Todos os itens estão certos"
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 178,
+    "tipo": "multipla",
+    "enunciado": "Segundo a NBC TSP 12, os pagamentos em caixa decorrentes de uma operação descontinuada devem ser classificados, na DFC, como atividade:",
+    "alternativas": [
+      "operacional",
+      "de investimento",
+      "de financiamento",
+      "operacional ou de investimento",
+      "de investimento ou de financiamento"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 179,
+    "tipo": "multipla",
+    "enunciado": "Na divulgação de despesas com publicidade institucional, estão explícitos corretamente apenas os elementos:",
+    "alternativas": [
+      "I e III",
+      "I, II e III",
+      "II e IV",
+      "I e IV",
+      "II, III e IV"
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 180,
+    "tipo": "multipla",
+    "enunciado": "Na estrutura programática da despesa, o código “252” refere-se à:",
+    "alternativas": [
+      "Unidade Orçamentária",
+      "Esfera Funcional",
+      "Função Institucional",
+      "Órgão Administrativo",
+      "Estágio Financeiro"
+    ],
+    "gabarito": "C"
   }
 ]
+
+
 
