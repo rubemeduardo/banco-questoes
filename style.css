@@ -1,34 +1,35 @@
-.questao {
-  position: relative;
-  padding: 16px;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-}
-
-.cabecalho-questao {
+.alternativa {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.marcar-errada {
+  justify-content: space-between;
+  padding: 6px 8px;
+  margin: 4px 0;
+  border-radius: 6px;
   cursor: pointer;
-  color: red;
+}
+
+.alternativa:hover {
+  background-color: #f6f6f6;
+}
+
+.alternativa .texto {
+  flex: 1;
+  margin-left: 6px;
+}
+
+.alternativa .btn-x {
+  visibility: hidden;
+  color: #b00020;
   font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-.questao:hover .marcar-errada {
-  opacity: 1;
+.alternativa:hover .btn-x {
+  visibility: visible;
 }
 
-.questao-tachada {
-  opacity: 0.6;
+.alternativa.tachada .texto {
   text-decoration: line-through;
-}
-
-mark {
-  background-color: #fff3a0;
-  padding: 2px 4px;
+  color: #999;
 }
