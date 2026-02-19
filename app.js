@@ -115,4 +115,25 @@ function toggleTachado(event, botao) {
   botao.closest(".alternativa").classList.toggle("tachada");
 }
 
+document.addEventListener("keydown", function (e) {
+  if (!window.getSelection) return;
+
+  const selection = window.getSelection();
+  if (selection.isCollapsed) return;
+
+  let cor = null;
+
+  if (e.altKey && e.key === "1") cor = "highlight-yellow";
+  if (e.altKey && e.key === "2") cor = "highlight-green";
+  if (e.altKey && e.key === "3") cor = "highlight-blue";
+
+  if (!cor) return;
+
+  const range = selection.getRangeAt(0);
+  const span = document.createElement("span");
+  span.className = cor;
+  range.surroundContents(span);
+  selection.removeAllRanges();
+});
+
 
