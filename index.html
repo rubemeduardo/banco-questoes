@@ -35,39 +35,53 @@ h1 {
   line-height: 1.6;
 }
 
+/* TOOLBAR DE MARCAÇÃO */
 .toolbar {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .toolbar span {
   cursor: pointer;
   font-size: 18px;
   margin-right: 8px;
+  user-select: none;
 }
 
+/* CORES DE MARCAÇÃO */
 .highlight-yellow { background: #fff59d; }
 .highlight-green  { background: #c8e6c9; }
 .highlight-blue   { background: #bbdefb; }
 
 .alternativa {
+  position: relative;
   border: 1px solid #ddd;
   border-radius: 6px;
-  padding: 10px;
+  padding: 10px 36px 10px 10px;
   margin-bottom: 8px;
   cursor: pointer;
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
+  display: block;
 }
 
-.alternativa.selecionada {
-  background: #e3f2fd;
-}
-
+/* alternativa marcada como errada */
 .alternativa.errada {
   text-decoration: line-through;
   opacity: 0.7;
   background: #ffecec;
+}
+
+/* X (somente hover) */
+.alternativa .marcar-errada {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-weight: bold;
+  color: #c62828;
+  display: none;
+  cursor: pointer;
+}
+
+.alternativa:hover .marcar-errada {
+  display: inline;
 }
 
 button {
@@ -101,13 +115,17 @@ textarea {
 
 <h1>Questões para Estudo</h1>
 
-<!-- CONTAINER ONDE AS QUESTÕES SERÃO INSERIDAS -->
+<!-- INSTRUÇÕES DE USO -->
+<div style="max-width:900px;margin:0 auto 20px;font-size:0.9em;color:#444;">
+  👉 Selecione um trecho do texto e clique em uma cor para marcar.<br>
+  👉 Passe o mouse sobre uma alternativa para marcar como errada (❌).
+</div>
+
+<!-- CONTAINER DAS QUESTÕES -->
 <div id="questoes"></div>
 
-<!-- CHAMADA DO JAVASCRIPT -->
+<!-- SCRIPT PRINCIPAL -->
 <script src="app.js" defer></script>
 
 </body>
 </html>
-
-
