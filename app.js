@@ -2,25 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   carregarQuestoes();
 });
 
-// Palavras-chave que serão destacadas no enunciado
-const PALAVRAS_CHAVE = [
-  "Lei de Responsabilidade Fiscal",
-  "LRF",
-  "receita",
-  "despesa",
-  "orçamento",
-  "calamidade pública",
-  "pessoal",
-  "gabarito",
-  "percentual",
-  "limite",
-  "classificação",
-  "investimento",
-  "transferência",
-  "corrente",
-  "capital"
-];
-
 async function carregarQuestoes() {
   try {
     const response = await fetch("questoes.json");
@@ -34,45 +15,25 @@ async function carregarQuestoes() {
       const questaoDiv = document.createElement("div");
       questaoDiv.className = "questao";
 
-      const enunciadoDestacado = destacarPalavras(q.enunciado);
-
       questaoDiv.innerHTML = `
-        <div class="cabecalho-questao">
-          <span class="id-questao">Questão ${q.id}</span>
-          <span class="marcar-errada" title="Marcar para revisão">✖</span>
+        <div class="meta">
+          <strong>Questão ${q.id}</strong>
         </div>
 
-        <p class="enunciado"><strong>${enunciadoDestacado}</strong></p>
+        <p class="enunciado">
+          ${q.enunciado}
+        </p>
 
         <div class="alternativas">
-          ${Object.values(q.alternativas)
-            .map((texto, index) => {
-              const letra = ["A", "B", "C", "D", "E"][index];
-              return `
-                <div class="alternativas">
-                  ${Object.entries(q.alternativas).map(([letra, texto]) => `
-                    <div class="alternativa">
-                      <input type="radio" name="questao-${q.id}" value="${letra}">
-                      <span class="texto"><strong>${letra})</strong> ${texto}</span>
-                      <span class="btn-x" onclick="toggleTachado(this)">✖</span>
-                    </div>
-                  `).join("")}
-                </div>
-              `;
-            }).join("")}
+          ${renderizarAlternativas(q)}
         </div>
 
-        <button class="btn-responder" onclick="responder(${q.id}, '${q.gabarito}')">
+        <button onclick="responder(${q.id}, '${q.gabarito}')">
           Responder
         </button>
 
         <div class="resultado" id="resultado-${q.id}"></div>
       `;
-
-      // Evento do X
-      questaoDiv.querySelector(".marcar-errada").addEventListener("click", () => {
-        questaoDiv.classList.toggle("questao-tachada");
-      });
 
       container.appendChild(questaoDiv);
     });
@@ -82,12 +43,30 @@ async function carregarQuestoes() {
   }
 }
 
+/* ===== RENDERIZA ALTERNATIVAS (A–E / A–D / C/E) ===== */
+function renderizarAlternativas(q) {
+  return Object.entries(q.alternativas)
+    .map(([letra, texto]) => {
+      return `
+        <div class="alternativa">
+          <input type="radio" name="questao-${q.id}" value="${letra}">
+          <span class="texto"><strong>${letra})</strong> ${texto}</span>
+          <span class="marcar-errada" onclick="toggleTachado(this)">✖</span>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+/* ===== RESPONDER ===== */
 function responder(idQuestao, gabarito) {
   const alternativas = document.getElementsByName(`questao-${idQuestao}`);
   let selecionada = null;
 
   alternativas.forEach(opcao => {
-    if (opcao.checked) selecionada = opcao.value;
+    if (opcao.checked) {
+      selecionada = opcao.value;
+    }
   });
 
   const resultadoDiv = document.getElementById(`resultado-${idQuestao}`);
@@ -107,17 +86,8 @@ function responder(idQuestao, gabarito) {
   }
 }
 
-// Destaque de palavras-chave
-function destacarPalavras(texto) {
-  let resultado = texto;
-  PALAVRAS_CHAVE.forEach(palavra => {
-    const regex = new RegExp(`\\b(${palavra})\\b`, "gi");
-    resultado = resultado.replace(regex, `<mark>$1</mark>`);
-  });
-  return resultado;
-}
+/* ===== TACHAR ALTERNATIVA ===== */
 function toggleTachado(botaoX) {
-  botaoX.closest(".alternativa").classList.toggle("tachada");
+  const alternativa = botaoX.closest(".alternativa");
+  alternativa.classList.toggle("tachada");
 }
-
-
