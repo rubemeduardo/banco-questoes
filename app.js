@@ -1,6 +1,6 @@
 const perfil = localStorage.getItem("perfil");
 
-if (!perfil) {
+if (perfil !== "usuario") {
   window.location.href = "index.html";
 }
 
@@ -168,4 +168,5 @@ document.addEventListener("keydown", function (e) {
 
   selection.removeAllRanges();
 });
+
 
