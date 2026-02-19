@@ -1655,11 +1655,248 @@
       "D": "Câmbio dispensa estimativa",
       "E": "Compensação dispensa anterioridade"
     }
+  },
+  {
+    "id": 101,
+    "tipo": "multipla",
+    "enunciado": "Considerando as disposições da Lei nº 13.019/2014, os instrumentos jurídicos adequados a serem firmados pelo Estado de Roraima com as organizações Alfa e Beta são, respectivamente:",
+    "alternativas": [
+      "o termo de transferência e o termo de colaboração.",
+      "o termo de fomento e o termo de colaboração.",
+      "o termo de colaboração e o acordo de cooperação.",
+      "o termo de ajustamento de gestão (TAG) e o termo de fomento.",
+      "o termo de ajustamento de conduta (TAC) e o acordo de cooperação."
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 102,
+    "tipo": "multipla",
+    "enunciado": "Sobre as receitas e despesas públicas e a Lei de Responsabilidade Fiscal (LRF), analise as assertivas e assinale a alternativa correta.",
+    "alternativas": [
+      "Todas as assertivas estão corretas.",
+      "Todas as assertivas estão incorretas.",
+      "Apenas a assertiva I está correta.",
+      "Apenas as assertivas I e II estão corretas.",
+      "Apenas as assertivas III e IV estão corretas."
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 103,
+    "tipo": "multipla",
+    "enunciado": "No que concerne à participação dos usuários na gestão dos serviços públicos, analise as assertivas e assinale quais estão corretas.",
+    "alternativas": [
+      "Apenas I e II.",
+      "Apenas I e III.",
+      "Apenas II e III.",
+      "Apenas III e IV.",
+      "Apenas II, III e IV."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 104,
+    "tipo": "ce",
+    "enunciado": "A despesa corrente derivada de ato administrativo normativo que fixe para o ente a obrigação de sua execução por um período superior a dois exercícios é considerada obrigatória de caráter continuado.",
+    "alternativas": ["Certo", "Errado"],
+    "gabarito": "Certo"
+  },
+  {
+    "id": 105,
+    "tipo": "ce",
+    "enunciado": "Os recursos vinculados a finalidade específica serão utilizados exclusivamente para atender ao objeto de sua vinculação apenas no exercício financeiro em que ocorrer o ingresso.",
+    "alternativas": ["Certo", "Errado"],
+    "gabarito": "Errado"
+  },
+  {
+    "id": 106,
+    "tipo": "ce",
+    "enunciado": "O anexo de metas fiscais deverá estabelecer metas anuais e também os passivos contingentes e outros riscos capazes de afetar as contas públicas.",
+    "alternativas": ["Certo", "Errado"],
+    "gabarito": "Errado"
+  },
+  {
+    "id": 107,
+    "tipo": "ce",
+    "enunciado": "Quando houver descumprimento de metas fiscais, impõe-se a indicação, no anexo de metas fiscais, das respectivas medidas mitigadoras.",
+    "alternativas": ["Certo", "Errado"],
+    "gabarito": "Errado"
+  },
+  {
+    "id": 108,
+    "tipo": "multipla",
+    "enunciado": "Considerando as disposições da Lei nº 8.429/1992, está correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "II, apenas.",
+      "III, apenas.",
+      "I e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 109,
+    "tipo": "multipla",
+    "enunciado": "Considerando o disposto na Lei nº 11.079/2004, é incorreto afirmar que:",
+    "alternativas": [
+      "as cláusulas de atualização automática independem de homologação, salvo rejeição fundamentada.",
+      "pode haver compartilhamento de ganhos econômicos decorrentes da redução do risco de crédito.",
+      "a contraprestação pode ocorrer por cessão de créditos não tributários e outros meios legais.",
+      "o prazo de vigência não pode ser inferior a cinco nem superior a trinta e cinco anos.",
+      "pode haver remuneração variável vinculada ao desempenho."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 110,
+    "tipo": "multipla",
+    "enunciado": "Assinale a opção que indica o passivo da sociedade empresária em 31/12/2024.",
+    "alternativas": [
+      "R$ 20.100.",
+      "R$ 23.500.",
+      "R$ 23.600.",
+      "R$ 28.600.",
+      "R$ 38.600."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 111,
+    "tipo": "multipla",
+    "enunciado": "Assinale a interpretação mais adequada sobre as implicações da renúncia de receita à luz da LRF.",
+    "alternativas": [
+      "A concessão é válida pela autonomia do governador.",
+      "A renúncia pode ser irregular se não houver estudo de impacto.",
+      "A renúncia pode ser regular se compensada, mesmo fora da LDO.",
+      "A medida é ilegal se não compatível com metas fiscais da LDO e LOA.",
+      "A regularidade depende apenas de previsão futura de arrecadação."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 112,
+    "tipo": "multipla",
+    "enunciado": "Considerando o limite de contingenciamento da LDO, a melhor solução para o Estado X é:",
+    "alternativas": [
+      "reduzir despesas obrigatórias.",
+      "solicitar revisão do limite de contingenciamento na LDO.",
+      "contrair empréstimos para cobrir o déficit.",
+      "contingenciar apenas R$ 10 milhões e manter déficit.",
+      "contingenciar inclusive despesas obrigatórias."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 113,
+    "tipo": "multipla",
+    "enunciado": "Considerando a Lei nº 13.019/2014, o instrumento jurídico adequado é:",
+    "alternativas": [
+      "Termo de Colaboração.",
+      "Termo de Fomento.",
+      "Termo de Pactuação.",
+      "Acordo de Finanças.",
+      "Acordo de Divulgação."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 114,
+    "tipo": "multipla",
+    "enunciado": "Sobre a Execução Orçamentária e o Cumprimento das Metas, está correto o que se afirma em:",
+    "alternativas": [
+      "I, apenas.",
+      "I e II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "I, II e III."
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 115,
+    "tipo": "multipla",
+    "enunciado": "Assinale a afirmativa correta sobre a classificação da despesa orçamentária.",
+    "alternativas": [
+      "A classificação por esfera é formada por funções e subfunções.",
+      "Há apenas duas esferas orçamentárias.",
+      "A esfera orçamentária define órgão e unidade.",
+      "A classificação institucional corresponde ao orçamento de investimento.",
+      "Fundos especiais podem figurar como órgão ou unidade."
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 116,
+    "tipo": "multipla",
+    "enunciado": "Sobre o parágrafo de ênfase em auditoria governamental, está correto o que se afirma em:",
+    "alternativas": [
+      "I, II e III.",
+      "II, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas.",
+      "III, apenas."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 117,
+    "tipo": "multipla",
+    "enunciado": "As afirmativas sobre o Balanço Financeiro são, respectivamente:",
+    "alternativas": [
+      "V-V-V.",
+      "F-V-V.",
+      "V-F-V.",
+      "V-V-F.",
+      "F-F-V."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 118,
+    "tipo": "multipla",
+    "enunciado": "Assinale a opção que indica o Saldo de Exercícios Anteriores.",
+    "alternativas": [
+      "R$ 40.000.",
+      "R$ 45.000.",
+      "R$ 55.000.",
+      "R$ 65.000.",
+      "R$ 85.000."
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 119,
+    "tipo": "multipla",
+    "enunciado": "Uma característica própria do ato administrativo é:",
+    "alternativas": [
+      "manifestação implícita da vontade estatal.",
+      "produção de efeitos jurídicos imediatos e controle judicial.",
+      "submissão apenas ao direito privado.",
+      "prática exclusiva do Poder Executivo.",
+      "ausência de sujeição à lei."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 120,
+    "tipo": "multipla",
+    "enunciado": "Assinale a opção que descreve as condições para inscrição em Restos a Pagar Não Processados.",
+    "alternativas": [
+      "Despesa liquidada até o fim do exercício.",
+      "Despesa paga até 31 de dezembro.",
+      "Empenho liquidado com pagamento pendente de aprovação legislativa.",
+      "Despesa referente a contrato renovado.",
+      "Serviço não verificado ou prazo ainda vigente."
+    ],
+    "gabarito": "E"
   }
 ]
 
   
   
+
 
 
 
