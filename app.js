@@ -7,7 +7,7 @@ async function carregarQuestoes() {
     const response = await fetch("questoes.json");
     const data = await response.json();
 
-    // Suporta JSON simples ou em lote
+    // Aceita JSON direto ou em lote { questoes: [] }
     const questoes = Array.isArray(data) ? data : data.questoes || [];
 
     const container = document.getElementById("questoes");
@@ -25,19 +25,24 @@ async function carregarQuestoes() {
         <p class="enunciado"><strong>${q.enunciado}</strong></p>
 
         <div class="alternativas">
-          ${Object.entries(q.alternativas)
-            .map(
-              ([letra, texto]) => `
-              <label class="alternativa">
-                <input type="radio" name="questao-${q.id}" value="${letra}">
-                <span><strong>${letra})</strong> ${texto}</span>
-              </label>
-            `
-            )
+          ${Object.values(q.alternativas)
+            .map((texto, index) => {
+              const letra = ["A", "B", "C", "D", "E"][index];
+              return `
+                <label class="alternativa">
+                  <input 
+                    type="radio" 
+                    name="questao-${q.id}" 
+                    value="${letra}"
+                  >
+                  <span><strong>${letra})</strong> ${texto}</span>
+                </label>
+              `;
+            })
             .join("")}
         </div>
 
-        <button class="btn-responder" data-id="${q.id}" data-gabarito="${q.gabarito}">
+        <button class="btn-responder" onclick="responder(${q.id}, '${q.gabarito}')">
           Responder
         </button>
 
@@ -45,15 +50,6 @@ async function carregarQuestoes() {
       `;
 
       container.appendChild(questaoDiv);
-    });
-
-    // Delegação de evento para os botões
-    container.addEventListener("click", event => {
-      if (event.target.classList.contains("btn-responder")) {
-        const id = event.target.dataset.id;
-        const gabarito = event.target.dataset.gabarito;
-        responder(id, gabarito);
-      }
     });
 
   } catch (erro) {
