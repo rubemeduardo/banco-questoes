@@ -1,0 +1,34 @@
+.questao {
+  position: relative;
+  padding: 16px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.cabecalho-questao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marcar-errada {
+  cursor: pointer;
+  color: red;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.questao:hover .marcar-errada {
+  opacity: 1;
+}
+
+.questao-tachada {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+mark {
+  background-color: #fff3a0;
+  padding: 2px 4px;
+}
