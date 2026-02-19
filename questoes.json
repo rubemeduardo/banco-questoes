@@ -182,9 +182,6 @@
   }
 },
     {
-  "lote": "ids_8_a_20",
-  "questoes": [
-    {
       "id": 8,
       "area": "Administração Financeira e Orçamentária",
       "tema": "Princípios Orçamentários",
@@ -462,7 +459,7 @@
       "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
     }
   ]
-}
+
 
 
 
