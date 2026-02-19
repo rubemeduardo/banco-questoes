@@ -41,14 +41,33 @@ async function carregarQuestoes() {
 }
 
 /* ================================
-   FUNÇÕES PLACEHOLDER (EVITAM ERRO)
+   MARCAÇÃO LIVRE DE TEXTO
 ================================ */
 function aplicarMarcacao(cor) {
-  // função será implementada depois
-  console.log("Marcação selecionada:", cor);
+  const selecao = window.getSelection();
+
+  if (!selecao || selecao.rangeCount === 0) return;
+
+  const range = selecao.getRangeAt(0);
+
+  if (range.collapsed) return; // nada selecionado
+
+  const span = document.createElement("span");
+
+  if (cor === "yellow") span.className = "highlight-yellow";
+  if (cor === "green") span.className = "highlight-green";
+  if (cor === "blue") span.className = "highlight-blue";
+
+  span.appendChild(range.extractContents());
+  range.insertNode(span);
+
+  // limpa a seleção
+  selecao.removeAllRanges();
 }
 
+/* ================================
+   PLACEHOLDERS (não quebram HTML)
+================================ */
 function filtrarQuestoes(tipo) {
-  // função será implementada depois
   console.log("Filtro:", tipo);
 }
