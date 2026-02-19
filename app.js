@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   carregarQuestoes();
 });
 
+/* =========================
+   CARREGAMENTO DAS QUESTÕES
+========================= */
 async function carregarQuestoes() {
   const response = await fetch("questoes.json");
   const data = await response.json();
@@ -22,14 +25,16 @@ async function carregarQuestoes() {
 
       <div class="alternativas">
         ${Object.entries(q.alternativas).map(([letra, texto]) => `
-          <label class="alternativa">
-            <input type="radio" name="questao-${q.id}" value="${letra}">
-            <span><strong>${letra})</strong> ${texto}</span>
-          </label>
+          <div class="alternativa"
+               data-letra="${letra}"
+               onclick="selecionarAlternativa(this)">
+            <span class="texto"><strong>${letra})</strong> ${texto}</span>
+            <span class="btn-x" onclick="event.stopPropagation();toggleTachado(this)">✖</span>
+          </div>
         `).join("")}
       </div>
 
-      <button class="btn-responder" onclick="responder(${q.id}, '${q.gabarito}', this)">
+      <button class="btn-responder" onclick="responderQuestao(this, '${q.gabarito}')">
         Responder
       </button>
 
@@ -40,20 +45,21 @@ async function carregarQuestoes() {
   });
 }
 
-function responder(id, gabarito, botao) {
+/* =========================
+   SELEÇÃO DE ALTERNATIVA
+========================= */
+function selecionarAlternativa(div) {
+  const alternativas = div.parentElement.querySelectorAll(".alternativa");
+  alternativas.forEach(a => a.classList.remove("selecionada"));
+  div.classList.add("selecionada");
+}
+
+/* =========================
+   RESPONDER QUESTÃO
+========================= */
+function responderQuestao(botao, gabarito) {
   const questao = botao.closest(".questao");
-  const alternativas = questao.querySelectorAll(
-    `input[name="questao-${id}"]`
-  );
-
-  let selecionada = null;
-
-  alternativas.forEach(opcao => {
-    if (opcao.checked) {
-      selecionada = opcao.value;
-    }
-  });
-
+  const selecionada = questao.querySelector(".alternativa.selecionada");
   const resultado = questao.querySelector(".resultado");
 
   if (!selecionada) {
@@ -62,9 +68,19 @@ function responder(id, gabarito, botao) {
     return;
   }
 
+  const letra = selecionada.dataset.letra;
   questao.dataset.status = "respondida";
 
-  if (selecionada === gabarito) {
+  questao.querySelectorAll(".alternativa").forEach(a => {
+    a.classList.remove("correta", "errada");
+    if (a.dataset.letra === gabarito) {
+      a.classList.add("correta");
+    } else if (a === selecionada) {
+      a.classList.add("errada");
+    }
+  });
+
+  if (letra === gabarito) {
     resultado.innerHTML =
       "<span style='color:green;font-weight:bold'>✔ Resposta correta</span>";
   } else {
@@ -74,7 +90,14 @@ function responder(id, gabarito, botao) {
 }
 
 /* =========================
-   FILTROS (MANTIDOS)
+   TACHAR ALTERNATIVA
+========================= */
+function toggleTachado(botaoX) {
+  botaoX.closest(".alternativa").classList.toggle("tachada");
+}
+
+/* =========================
+   FILTROS
 ========================= */
 function filtrarQuestoes(tipo) {
   document.querySelectorAll(".questao").forEach(q => {
@@ -84,4 +107,21 @@ function filtrarQuestoes(tipo) {
     else if (tipo === "nao")
       q.style.display = q.dataset.status === "nao" ? "block" : "none";
   });
+}
+
+/* =========================
+   MARCAÇÃO LIVRE DE TEXTO
+========================= */
+function aplicarMarcacao(cor) {
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return;
+
+  const range = selection.getRangeAt(0);
+  if (range.collapsed) return;
+
+  const span = document.createElement("span");
+  span.className = `highlight-${cor}`;
+  range.surroundContents(span);
+
+  selection.removeAllRanges();
 }
