@@ -92,10 +92,3 @@ function atualizarPlacar() {
     <strong>Acertos:</strong> ${acertos}
   `;
 }
-
-
-
-      container.appendChild(bloco);
-    });
-  });
-
