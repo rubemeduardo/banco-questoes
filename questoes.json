@@ -1891,11 +1891,264 @@
       "Serviço não verificado ou prazo ainda vigente."
     ],
     "gabarito": "E"
+  },
+  {
+    "id": 121,
+    "tipo": "multipla",
+    "enunciado": "Assinale a opção que apresenta um exemplo de receita primária do Governo Federal.",
+    "alternativas": [
+      "Receitas obtidas através de tributos e contribuições sociais.",
+      "Receitas provenientes da emissão de títulos públicos.",
+      "Receitas decorrentes de operações de crédito com organismos oficiais.",
+      "Aplicações financeiras da União junto ao mercado financeiro.",
+      "Receitas resultantes da contratação de operações de crédito."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 122,
+    "tipo": "multipla",
+    "enunciado": "Com base no caso concreto e na legislação vigente, é correto afirmar que",
+    "alternativas": [
+      "a Lei de Responsabilidade Fiscal não se aplica às empresas estatais dependentes.",
+      "a empresa pública X é considerada empresa estatal dependente.",
+      "a empresa pública X não se sujeita à LRF se sua atividade for econômica.",
+      "o repasse para custeio não caracteriza dependência financeira.",
+      "a empresa só será dependente se todas as receitas forem da União."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 123,
+    "tipo": "multipla",
+    "enunciado": "A Lei Complementar nº 101/2000 estabelece que a despesa total com pessoal dos Municípios não poderá exceder:",
+    "alternativas": [
+      "20% da receita corrente líquida.",
+      "30% da receita corrente líquida.",
+      "50% da receita corrente líquida.",
+      "60% da receita corrente líquida.",
+      "70% da receita corrente líquida."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 124,
+    "tipo": "multipla",
+    "enunciado": "De acordo com a estrutura da programação orçamentária, a classificação que determina o orçamento fiscal, da seguridade social ou de investimentos é a",
+    "alternativas": [
+      "Classificação institucional.",
+      "Classificação funcional.",
+      "Classificação quantitativa.",
+      "Classificação por esfera."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 125,
+    "tipo": "multipla",
+    "enunciado": "Na classificação da despesa por natureza, os auxílios são despesas destinadas",
+    "alternativas": [
+      "a atender despesas de investimentos ou inversões financeiras de outras esferas ou entidades sem fins lucrativos.",
+      "ao reembolso de bonificações a produtores.",
+      "à cobertura de despesas de instituições privadas assistenciais.",
+      "à manutenção de outras entidades públicas ou privadas.",
+      "ao pagamento de ajuda financeira a entidades privadas com fins lucrativos."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 126,
+    "tipo": "multipla",
+    "enunciado": "A dotação destinada a cobrir déficit de manutenção de empresa pública autárquica é classificada como",
+    "alternativas": [
+      "subvenção econômica.",
+      "inversão financeira.",
+      "investimento.",
+      "transferência de capital.",
+      "despesa de custeio."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 127,
+    "tipo": "multipla",
+    "enunciado": "O órgão competente para elaboração e normatização do Plano de Contas Aplicado ao Setor Público (PCASP) é",
+    "alternativas": [
+      "Banco Central do Brasil.",
+      "Conselho Federal de Contabilidade.",
+      "Sistema Integrado de Administração Financeira do Governo Federal.",
+      "Secretaria do Tesouro Nacional."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 128,
+    "tipo": "multipla",
+    "enunciado": "A dotação destinada à aquisição de terreno para construção de escola é classificada como",
+    "alternativas": [
+      "despesa de custeio.",
+      "investimento.",
+      "subvenção econômica.",
+      "subvenção social.",
+      "transferência corrente."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 129,
+    "tipo": "multipla",
+    "enunciado": "A cobertura de déficits de empresa municipal, se prevista no orçamento, ocorre por meio de",
+    "alternativas": [
+      "subvenção econômica.",
+      "investimento.",
+      "transferência de capital.",
+      "auxílio para inversão financeira.",
+      "subsídio especial."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 130,
+    "tipo": "multipla",
+    "enunciado": "A transferência de recursos para entidade privada assistencial sem fins lucrativos é válida desde que",
+    "alternativas": [
+      "haja contraprestação direta e seja subvenção social de capital.",
+      "haja contraprestação direta e seja subvenção econômica corrente.",
+      "não haja contraprestação e seja subvenção social de capital.",
+      "não haja contraprestação e seja subvenção social corrente.",
+      "não haja contraprestação e seja subvenção econômica de capital."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 131,
+    "tipo": "multipla",
+    "enunciado": "Segundo a Lei nº 8.429/92, o juiz poderá autorizar o parcelamento do ressarcimento",
+    "alternativas": [
+      "em nenhuma hipótese.",
+      "em até 48 parcelas, se comprovada incapacidade financeira.",
+      "em até 48 parcelas, independentemente da condição financeira.",
+      "em até 60 parcelas, independentemente da condição financeira.",
+      "em até 60 parcelas, se houver justiça gratuita."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 132,
+    "tipo": "multipla",
+    "enunciado": "A Lei nº 9.790/99 dispõe que a OSCIP",
+    "alternativas": [
+      "não pode adquirir bem imóvel.",
+      "pode adquirir bem imóvel livre de ônus.",
+      "pode adquirir bem imóvel apenas em sociedade com o Município.",
+      "pode adquirir bem imóvel impenhorável.",
+      "pode adquirir bem imóvel com cláusula de inalienabilidade."
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 133,
+    "tipo": "multipla",
+    "enunciado": "As despesas com adaptação de imóvel público para atendimento ao público são classificadas como",
+    "alternativas": [
+      "transferências correntes.",
+      "despesas de capital.",
+      "despesas de custeio.",
+      "investimentos.",
+      "inversões financeiras."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 134,
+    "tipo": "multipla",
+    "enunciado": "O saldo das despesas de capital corresponde ao valor de",
+    "alternativas": [
+      "R$ 40.000.",
+      "R$ 80.000.",
+      "R$ 100.000.",
+      "R$ 110.000.",
+      "R$ 140.000."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 135,
+    "tipo": "multipla",
+    "enunciado": "No orçamento da União, a ação orçamentária descrita deve ser classificada como",
+    "alternativas": [
+      "inversão financeira.",
+      "projeto.",
+      "atividade.",
+      "despesa extraorçamentária.",
+      "operação especial."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 136,
+    "tipo": "multipla",
+    "enunciado": "O algarismo que identifica a ação orçamentária do tipo atividade é",
+    "alternativas": [
+      "0.",
+      "4.",
+      "3.",
+      "1.",
+      "7."
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 137,
+    "tipo": "multipla",
+    "enunciado": "A atuação das Unidades Orçamentárias no processo orçamentário compreende",
+    "alternativas": [
+      "análise e validação das propostas.",
+      "formalização da proposta do órgão.",
+      "avaliação da estrutura programática.",
+      "estudos de adequação programática.",
+      "coordenação do cadastro de programas."
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 138,
+    "tipo": "ce",
+    "enunciado": "A diferença entre o valor à vista e o valor a prazo deve ser reconhecida como receita financeira no momento da venda.",
+    "alternativas": ["Certo", "Errado"],
+    "gabarito": "Errado"
+  },
+  {
+    "id": 139,
+    "tipo": "multipla",
+    "enunciado": "As dotações destinadas à aquisição de bens de capital já em utilização classificam-se como",
+    "alternativas": [
+      "investimentos.",
+      "inversões financeiras.",
+      "transferências de capital.",
+      "despesas de custeio.",
+      "subvenções econômicas."
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 140,
+    "tipo": "multipla",
+    "enunciado": "Assinale a opção que apresenta uma desvantagem da classificação departamental.",
+    "alternativas": [
+      "Permite comparar órgãos.",
+      "Facilita a contabilização de custos.",
+      "Centraliza responsabilidade.",
+      "Gera rivalidades interorganizacionais.",
+      "Identifica o agente responsável."
+    ],
+    "gabarito": "D"
   }
 ]
 
   
   
+
 
 
 
