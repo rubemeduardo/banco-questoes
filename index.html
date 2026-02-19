@@ -1,86 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Login – Questões para Estudo</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.login-box {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  width: 320px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-.login-box h1 {
-  margin-bottom: 20px;
-}
-
-.login-box button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn-admin {
-  background: #1976d2;
-  color: #fff;
-}
-
-.btn-user {
-  background: #4caf50;
-  color: #fff;
-}
-
-.login-box p {
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 15px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Login – Questões para Estudo</title>
+  <link rel="stylesheet" href="login.css">
 </head>
-
 <body>
 
-<div class="login-box">
-  <h1>Questões</h1>
+  <div class="login-container">
+    <h1>Login</h1>
 
-  <button class="btn-admin" onclick="login('admin')">
-    Entrar como Administrador
-  </button>
+    <label>
+      Usuário
+      <input type="text" id="usuario" placeholder="admin ou usuario">
+    </label>
 
-  <button class="btn-user" onclick="login('usuario')">
-    Entrar como Usuário
-  </button>
+    <label>
+      Senha
+      <input type="password" id="senha" placeholder="Digite a senha">
+    </label>
 
-  <p>
-    O perfil define as funcionalidades disponíveis.
-  </p>
-</div>
+    <button onclick="login()">Entrar</button>
 
-<script>
-function login(perfil) {
-  localStorage.setItem("perfilUsuario", perfil);
-  window.location.href = "questoes.html";
-}
-</script>
+    <p id="erro" class="erro"></p>
+  </div>
 
+  <script src="login.js"></script>
 </body>
 </html>
-
