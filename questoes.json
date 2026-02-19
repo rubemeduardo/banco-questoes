@@ -128,9 +128,61 @@
     "acertos": 0,
     "erros": 0
   }
+},
+  {
+  "id": 6,
+  "area": "Direito Financeiro",
+  "tema": "A Receita Pública",
+  "subtema": "Renúncia de Receita em Estado de Calamidade",
+  "ano": 2025,
+  "banca": "FGV",
+  "orgao": "TCE-PE",
+  "prova": "FGV - 2025 - TCE-PE - Analista de Gestão - Julgamento",
+  "enunciado": "Durante o estado de calamidade pública reconhecido nacionalmente em razão da pandemia da COVID-19, o Município localizado no Estado de Pernambuco editou lei prevendo a redução temporária da alíquota de ISSQN para empresas do setor hoteleiro, fortemente afetado pela crise. Posteriormente, ao analisar a legalidade do ato, o Tribunal de Contas de Pernambuco (TCE/PE) examinou se a medida caracterizaria renúncia de receita incompatível com as exigências da Lei de Responsabilidade Fiscal (LRF), especialmente quanto à ausência de estimativa de impacto financeiro e medidas de compensação. À luz do entendimento do TCE/PE e da jurisprudência correlata, assinale a afirmativa correta.",
+  "alternativas": {
+    "A": "A medida é inconstitucional, por afrontar o princípio da isonomia tributária, visto que não estendia o benefício a todos os setores econômicos afetados.",
+    "B": "A concessão do benefício é legítima, desde que prevista em contrato de concessão anterior à pandemia, dispensando lei específica ou nexo com a calamidade.",
+    "C": "Admite-se, durante o estado pandêmico, a redução de alíquota, desde que atendidos os requisitos de publicidade e motivação, com lei específica e com nexo causal com o combate aos efeitos da pandemia.",
+    "D": "Qualquer isenção, mesmo que temporária, exige demonstração de impacto orçamentário e medidas de compensação, mesmo em estado de calamidade pública.",
+    "E": "As renúncias fiscais em tempos de calamidade são dispensadas de qualquer controle ou motivação, dada a urgência das medidas emergenciais."
+  },
+  "gabarito": "C",
+  "fonte_gabarito": "Entendimento do TCE/PE e jurisprudência correlata sobre LRF em estado de calamidade",
+  "comentario_admin": "Durante a pandemia, admite-se a redução temporária de alíquotas desde que haja lei específica, motivação adequada e nexo causal com o enfrentamento da crise, não havendo dispensa automática de controle.",
+  "estatisticas": {
+    "respondida": 0,
+    "acertos": 0,
+    "erros": 0
+  }
+},
+  {
+  "id": 7,
+  "area": "Administração Financeira e Orçamentária",
+  "tema": "Lei de Responsabilidade Fiscal",
+  "subtema": "Anexo de Metas Fiscais",
+  "ano": 2025,
+  "banca": "FGV",
+  "orgao": "AGESAN-RS",
+  "prova": "FGV - 2025 - AGESAN-RS - Agente de Controle Financeiro - Contábil",
+  "enunciado": "A Lei Complementar nº 101/00, denominada Lei de Responsabilidade Fiscal (LRF), disciplina o conteúdo do anexo de metas fiscais, que deve acompanhar o projeto de Lei de Diretrizes Orçamentárias. Nos termos da LRF, é conteúdo obrigatório do anexo de metas fiscais",
+  "alternativas": {
+    "A": "a avaliação do cumprimento das metas relativas ao ano anterior.",
+    "B": "o demonstrativo da estimativa e compensação da renúncia de receita, excluída a margem de expansão das despesas obrigatórias de caráter continuado.",
+    "C": "o demonstrativo das metas anuais, instruído com memória e metodologia de cálculo que justifiquem os resultados pretendidos, comparando-as com as fixadas nos dois exercícios anteriores.",
+    "D": "a avaliação da situação financeira e atuarial de todos os fundos públicos e programas estatais.",
+    "E": "a evolução do patrimônio líquido, nos últimos dois exercícios, destacando a origem e a aplicação dos recursos obtidos com a alienação de ativos."
+  },
+  "gabarito": "A",
+  "fonte_gabarito": "Art. 4º, §1º, inciso I, da Lei Complementar nº 101/2000",
+  "comentario_admin": "A avaliação do cumprimento das metas relativas ao ano anterior é conteúdo expresso e obrigatório do Anexo de Metas Fiscais da LDO.",
+  "estatisticas": {
+    "respondida": 0,
+    "acertos": 0,
+    "erros": 0
+  }
 }
 
-
 ]
+
 
 
