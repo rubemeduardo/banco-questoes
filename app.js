@@ -1,149 +1,75 @@
 document.addEventListener("DOMContentLoaded", () => {
+  carregarQuestoes();
+});
 
-  const container = document.getElementById("questoes");
-  if (!container) {
-    alert("Erro: div #questoes não encontrada");
+async function carregarQuestoes() {
+  try {
+    const response = await fetch("questoes.json");
+    const data = await response.json();
+
+    // Caso o JSON venha em lote { lote:..., questoes: [...] }
+    const questoes = Array.isArray(data) ? data : data.questoes || [];
+
+    const container = document.getElementById("questoes");
+    container.innerHTML = "";
+
+    questoes.forEach(q => {
+      const questaoDiv = document.createElement("div");
+      questaoDiv.className = "questao";
+
+      questaoDiv.innerHTML = `
+        <div class="cabecalho-questao">
+          <span class="id-questao">Questão ${q.id}</span>
+        </div>
+
+        <p class="enunciado"><strong>${q.enunciado}</strong></p>
+
+        <div class="alternativas">
+          ${Object.entries(q.alternativas).map(([letra, texto]) => `
+            <label class="alternativa">
+              <input type="radio" name="questao-${q.id}" value="${letra}">
+              <span><strong>${letra})</strong> ${texto}</span>
+            </label>
+          `).join("")}
+        </div>
+
+        <button class="btn-responder" onclick="responder(${q.id}, '${q.gabarito}')">
+          Responder
+        </button>
+
+        <div class="resultado" id="resultado-${q.id}"></div>
+      `;
+
+      container.appendChild(questaoDiv);
+    });
+
+  } catch (erro) {
+    console.error("Erro ao carregar questões:", erro);
+    document.getElementById("questoes").innerHTML =
+      "<p>Erro ao carregar as questões.</p>";
+  }
+}
+
+function responder(idQuestao, gabarito) {
+  const alternativas = document.getElementsByName(`questao-${idQuestao}`);
+  let selecionada = null;
+
+  alternativas.forEach(opcao => {
+    if (opcao.checked) {
+      selecionada = opcao.value;
+    }
+  });
+
+  const resultadoDiv = document.getElementById(`resultado-${idQuestao}`);
+
+  if (!selecionada) {
+    resultadoDiv.innerHTML = "<span style='color: orange;'>Selecione uma alternativa.</span>";
     return;
   }
 
-  /* ===============================
-     CONTROLE DE CORES (HIGHLIGHT)
-     =============================== */
-  let corAtual = "highlight-yellow";
-
-  function marcarTextoSelecionado() {
-    const selection = window.getSelection();
-    if (!selection || selection.rangeCount === 0) return;
-
-    const range = selection.getRangeAt(0);
-    if (range.collapsed) return;
-
-    // garante que é texto puro (evita erro de DOM)
-    if (
-      range.startContainer.nodeType !== Node.TEXT_NODE ||
-      range.endContainer.nodeType !== Node.TEXT_NODE
-    ) {
-      alert("Selecione apenas texto contínuo.");
-      return;
-    }
-
-    const span = document.createElement("span");
-    span.className = corAtual;
-    span.style.padding = "2px 4px";
-    span.style.borderRadius = "4px";
-
-    span.appendChild(range.extractContents());
-    range.insertNode(span);
-
-    selection.removeAllRanges();
+  if (selecionada === gabarito) {
+    resultadoDiv.innerHTML = "<span style='color: green; font-weight: bold;'>✔ Resposta correta</span>";
+  } else {
+    resultadoDiv.innerHTML = `<span style='color: red; font-weight: bold;'>✘ Resposta incorreta. Gabarito: ${gabarito}</span>`;
   }
-
-  /* ===============================
-     CARREGAMENTO DAS QUESTÕES
-     =============================== */
-  fetch("questoes.json")
-    .then(res => {
-      if (!res.ok) throw new Error("Erro ao carregar questoes.json");
-      return res.json();
-    })
-    .then(questoes => {
-
-      questoes.forEach(q => {
-        const questao = document.createElement("div");
-        questao.className = "questao";
-
-        /* ---------- META + ENUNCIADO ---------- */
-        questao.innerHTML = `
-          <div class="meta">
-            <strong>${q.area}</strong> | ${q.tema}<br>
-            Ano: ${q.ano} | Banca: ${q.banca} | Órgão: ${q.orgao}
-          </div>
-
-          <div class="enunciado">${q.enunciado}</div>
-
-          <div class="toolbar">
-            <span data-cor="highlight-yellow">🟨</span>
-            <span data-cor="highlight-green">🟩</span>
-            <span data-cor="highlight-blue">🟦</span>
-            <span class="marcar">✏️</span>
-          </div>
-        `;
-
-        /* ---------- TOOLBAR ---------- */
-        const toolbar = questao.querySelector(".toolbar");
-
-        toolbar.querySelectorAll("span[data-cor]").forEach(btn => {
-          btn.addEventListener("click", () => {
-            corAtual = btn.dataset.cor;
-          });
-        });
-
-        toolbar.querySelector(".marcar")
-               .addEventListener("click", marcarTextoSelecionado);
-
-        /* ---------- ALTERNATIVAS ---------- */
-        Object.entries(q.alternativas).forEach(([letra, texto]) => {
-          const alt = document.createElement("div");
-          alt.className = "alternativa";
-          alt.dataset.opcao = letra;
-
-          const x = document.createElement("span");
-          x.textContent = "❌";
-          x.style.cursor = "pointer";
-          x.onclick = e => {
-            e.stopPropagation();
-            alt.classList.toggle("errada");
-          };
-
-          const txt = document.createElement("span");
-          txt.innerHTML = `<strong>${letra})</strong> ${texto}`;
-
-          alt.appendChild(x);
-          alt.appendChild(txt);
-
-          // marcar como resposta escolhida
-          alt.onclick = () => {
-            questao.querySelectorAll(".alternativa")
-              .forEach(a => a.classList.remove("selecionada"));
-            alt.classList.add("selecionada");
-          };
-
-          questao.appendChild(alt);
-        });
-
-        /* ---------- BOTÃO RESPONDER ---------- */
-        const btnResponder = document.createElement("button");
-        btnResponder.textContent = "Responder";
-
-        btnResponder.onclick = () => {
-          const selecionada = questao.querySelector(".alternativa.selecionada");
-
-          if (!selecionada) {
-            alert("Selecione uma alternativa.");
-            return;
-          }
-
-          // limpa cores anteriores
-          questao.querySelectorAll(".alternativa")
-            .forEach(a => a.style.background = "");
-
-          if (selecionada.dataset.opcao === q.gabarito) {
-            selecionada.style.background = "#c8f7c5";
-            alert("✅ Você acertou!");
-          } else {
-            selecionada.style.background = "#ffd6d6";
-            alert(`❌ Você errou. Gabarito: ${q.gabarito}`);
-          }
-        };
-
-        questao.appendChild(btnResponder);
-        container.appendChild(questao);
-      });
-
-    })
-    .catch(err => {
-      console.error(err);
-      alert("Erro ao carregar as questões. Veja o console.");
-    });
-
-});
+}
