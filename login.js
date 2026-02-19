@@ -5,12 +5,10 @@ function login() {
 
   erro.textContent = "";
 
-  // PERFIL ÚNICO: USUÁRIO
   if (usuario === "usuario" && senha === "usuario123") {
     localStorage.setItem("perfil", "usuario");
     window.location.href = "questoes.html";
-    return;
+  } else {
+    erro.textContent = "Usuário ou senha inválidos.";
   }
-
-  erro.textContent = "Usuário ou senha inválidos.";
 }
