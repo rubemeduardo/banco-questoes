@@ -2,28 +2,18 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Login – Questões para Estudo</title>
-  <link rel="stylesheet" href="login.css">
+  <title>Login</title>
 </head>
 <body>
 
-  <div class="login-container">
-    <h1>Login</h1>
+  <h2>Login do Usuário</h2>
 
-    <label>
-      Usuário
-      <input type="text" id="usuario" placeholder="admin ou usuario">
-    </label>
+  <input type="text" id="usuario" placeholder="Usuário"><br><br>
+  <input type="password" id="senha" placeholder="Senha"><br><br>
 
-    <label>
-      Senha
-      <input type="password" id="senha" placeholder="Digite a senha">
-    </label>
+  <button onclick="login()">Entrar</button>
 
-    <button onclick="login()">Entrar</button>
-
-    <p id="erro" class="erro"></p>
-  </div>
+  <p id="erro" style="color:red;"></p>
 
   <script src="login.js"></script>
 </body>
