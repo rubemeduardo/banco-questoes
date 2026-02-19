@@ -1,12 +1,14 @@
-const perfil = localStorage.getItem("perfil");
+const PROGRESSO_KEY = "progressoQuestoes";
 
-if (perfil !== "usuario") {
-  window.location.href = "index.html";
+function obterProgresso() {
+  return JSON.parse(localStorage.getItem(PROGRESSO_KEY)) || {};
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  carregarQuestoes();
-});
+function salvarProgresso(idQuestao, status) {
+  const progresso = obterProgresso();
+  progresso[idQuestao] = status; // "correta" ou "errada"
+  localStorage.setItem(PROGRESSO_KEY, JSON.stringify(progresso));
+}
 
 /* ============================
    CARREGAMENTO DAS QUESTÕES
@@ -168,6 +170,7 @@ document.addEventListener("keydown", function (e) {
 
   selection.removeAllRanges();
 });
+
 
 
 
