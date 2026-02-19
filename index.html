@@ -1,131 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Questões para Estudo</title>
-<link rel="stylesheet" href="style.css">
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 20px;
-}
-
-h1 {
-  text-align: center;
-}
-
-.questao {
-  background: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
-
-.meta {
-  font-size: 0.9em;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.enunciado {
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-/* TOOLBAR DE MARCAÇÃO */
-.toolbar {
-  margin-bottom: 12px;
-}
-
-.toolbar span {
-  cursor: pointer;
-  font-size: 18px;
-  margin-right: 8px;
-  user-select: none;
-}
-
-/* CORES DE MARCAÇÃO */
-.highlight-yellow { background: #fff59d; }
-.highlight-green  { background: #c8e6c9; }
-.highlight-blue   { background: #bbdefb; }
-
-.alternativa {
-  position: relative;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 10px 36px 10px 10px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  display: block;
-}
-
-/* alternativa marcada como errada */
-.alternativa.errada {
-  text-decoration: line-through;
-  opacity: 0.7;
-  background: #ffecec;
-}
-
-/* X (somente hover) */
-.alternativa .marcar-errada {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  font-weight: bold;
-  color: #c62828;
-  display: none;
-  cursor: pointer;
-}
-
-.alternativa:hover .marcar-errada {
-  display: inline;
-}
-
-button {
-  margin-top: 10px;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  background: #1976d2;
-  color: #fff;
-  cursor: pointer;
-}
-
-.section {
-  margin-top: 12px;
-  font-size: 0.9em;
-  color: #444;
-}
-
-textarea {
-  width: 100%;
-  min-height: 60px;
-  margin-top: 6px;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Questões para Estudo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <h1>Questões para Estudo</h1>
 
-<!-- INSTRUÇÕES DE USO -->
-<div style="max-width:900px;margin:0 auto 20px;font-size:0.9em;color:#444;">
-  👉 Selecione um trecho do texto e clique em uma cor para marcar.<br>
-  👉 Passe o mouse sobre uma alternativa para marcar como errada (❌).
-</div>
+<p style="text-align:center; font-size:14px; color:#555;">
+  👉 Selecione um trecho do texto e use:
+  <strong>Alt + 1</strong> (amarelo),
+  <strong>Alt + 2</strong> (verde),
+  <strong>Alt + 3</strong> (azul)
+</p>
 
-<!-- CONTAINER DAS QUESTÕES -->
 <div id="questoes"></div>
 
-<!-- SCRIPT PRINCIPAL -->
 <script src="app.js" defer></script>
-
 </body>
 </html>
