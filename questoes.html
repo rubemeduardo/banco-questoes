@@ -10,13 +10,14 @@
 
 <h1>Questões para Estudo</h1>
 
-<p style="text-align:center; font-size:14px; color:#555;">
-  👉 Selecione um trecho do texto e pressione:
-  <strong>Alt + 1</strong> (amarelo),
-  <strong>Alt + 2</strong> (verde),
-  <strong>Alt + 3</strong> (azul)
-</p>
+<!-- FILTROS -->
+<div class="filtros">
+  <button onclick="filtrarQuestoes('todas')">Todas</button>
+  <button onclick="filtrarQuestoes('respondidas')">Respondidas</button>
+  <button onclick="filtrarQuestoes('nao')">Não respondidas</button>
+</div>
 
+<!-- CONTAINER DAS QUESTÕES -->
 <div id="questoes"></div>
 
 <script src="app.js" defer></script>
