@@ -7,7 +7,7 @@ async function carregarQuestoes() {
     const response = await fetch("questoes.json");
     const data = await response.json();
 
-    // Caso o JSON venha em lote { lote:..., questoes: [...] }
+    // Suporta JSON simples ou em lote
     const questoes = Array.isArray(data) ? data : data.questoes || [];
 
     const container = document.getElementById("questoes");
@@ -25,15 +25,19 @@ async function carregarQuestoes() {
         <p class="enunciado"><strong>${q.enunciado}</strong></p>
 
         <div class="alternativas">
-          ${Object.entries(q.alternativas).map(([letra, texto]) => `
-            <label class="alternativa">
-              <input type="radio" name="questao-${q.id}" value="${letra}">
-              <span><strong>${letra})</strong> ${texto}</span>
-            </label>
-          `).join("")}
+          ${Object.entries(q.alternativas)
+            .map(
+              ([letra, texto]) => `
+              <label class="alternativa">
+                <input type="radio" name="questao-${q.id}" value="${letra}">
+                <span><strong>${letra})</strong> ${texto}</span>
+              </label>
+            `
+            )
+            .join("")}
         </div>
 
-        <button class="btn-responder" onclick="responder(${q.id}, '${q.gabarito}')">
+        <button class="btn-responder" data-id="${q.id}" data-gabarito="${q.gabarito}">
           Responder
         </button>
 
@@ -41,6 +45,15 @@ async function carregarQuestoes() {
       `;
 
       container.appendChild(questaoDiv);
+    });
+
+    // Delegação de evento para os botões
+    container.addEventListener("click", event => {
+      if (event.target.classList.contains("btn-responder")) {
+        const id = event.target.dataset.id;
+        const gabarito = event.target.dataset.gabarito;
+        responder(id, gabarito);
+      }
     });
 
   } catch (erro) {
@@ -63,13 +76,16 @@ function responder(idQuestao, gabarito) {
   const resultadoDiv = document.getElementById(`resultado-${idQuestao}`);
 
   if (!selecionada) {
-    resultadoDiv.innerHTML = "<span style='color: orange;'>Selecione uma alternativa.</span>";
+    resultadoDiv.innerHTML =
+      "<span style='color: orange;'>Selecione uma alternativa.</span>";
     return;
   }
 
   if (selecionada === gabarito) {
-    resultadoDiv.innerHTML = "<span style='color: green; font-weight: bold;'>✔ Resposta correta</span>";
+    resultadoDiv.innerHTML =
+      "<span style='color: green; font-weight: bold;'>✔ Resposta correta</span>";
   } else {
-    resultadoDiv.innerHTML = `<span style='color: red; font-weight: bold;'>✘ Resposta incorreta. Gabarito: ${gabarito}</span>`;
+    resultadoDiv.innerHTML =
+      `<span style='color: red; font-weight: bold;'>✘ Resposta incorreta. Gabarito: ${gabarito}</span>`;
   }
 }
