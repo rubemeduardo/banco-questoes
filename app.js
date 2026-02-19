@@ -1,10 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  carregarQuestoes();
-});
-
-/* =======================
-   CARREGAR QUESTÕES
-======================= */
+document.addEventListener("DOMContentLoaded", carregarQuestoes);
 
 async function carregarQuestoes() {
   const response = await fetch("questoes.json");
@@ -19,6 +13,8 @@ async function carregarQuestoes() {
     div.className = "questao";
 
     div.innerHTML = `
+      <div class="meta">Questão ${q.id}</div>
+
       <p class="enunciado"><strong>${q.enunciado}</strong></p>
 
       <div class="alternativas">
@@ -36,42 +32,39 @@ async function carregarQuestoes() {
   });
 }
 
-/* =======================
-   ALTERNATIVAS
-======================= */
+/* ===== Alternativas com letras garantidas ===== */
 
 function renderizarAlternativas(q) {
-  return Object.entries(q.alternativas)
-    .map(([letra, texto]) => `
-      <div class="alternativa"
-           data-questao="${q.id}"
-           data-letra="${letra}"
-           onclick="selecionarAlternativa(this)">
-        <span class="texto"><strong>${letra})</strong> ${texto}</span>
-        <span class="marcar-errada" onclick="toggleTachado(event, this)">✖</span>
-      </div>
-    `).join("");
+  const letras = ["A", "B", "C", "D", "E"];
+
+  return Object.values(q.alternativas).map((texto, i) => `
+    <div class="alternativa"
+         data-questao="${q.id}"
+         data-letra="${letras[i]}"
+         onclick="selecionarAlternativa(this)">
+      <span class="texto"><strong>${letras[i]})</strong> ${texto}</span>
+      <span class="marcar-errada" onclick="toggleTachado(event, this)">✖</span>
+    </div>
+  `).join("");
 }
 
 function selecionarAlternativa(el) {
-  const questao = el.dataset.questao;
+  const id = el.dataset.questao;
   document
-    .querySelectorAll(`.alternativa[data-questao="${questao}"]`)
+    .querySelectorAll(`.alternativa[data-questao="${id}"]`)
     .forEach(a => a.classList.remove("selecionada"));
 
   el.classList.add("selecionada");
 }
 
-/* =======================
-   RESPONDER
-======================= */
+/* ===== Correção ===== */
 
-function responder(idQuestao, gabarito) {
+function responder(id, gabarito) {
   const selecionada = document.querySelector(
-    `.alternativa[data-questao="${idQuestao}"].selecionada`
+    `.alternativa[data-questao="${id}"].selecionada`
   );
 
-  const resultado = document.getElementById(`resultado-${idQuestao}`);
+  const resultado = document.getElementById(`resultado-${id}`);
 
   if (!selecionada) {
     resultado.innerHTML = "⚠ Selecione uma alternativa.";
@@ -87,35 +80,28 @@ function responder(idQuestao, gabarito) {
   }
 }
 
-/* =======================
-   TACHAR ALTERNATIVA
-======================= */
+/* ===== X para tachar ===== */
 
-function toggleTachado(event, botao) {
-  event.stopPropagation();
-  botao.closest(".alternativa").classList.toggle("tachada");
+function toggleTachado(e, el) {
+  e.stopPropagation();
+  el.closest(".alternativa").classList.toggle("tachada");
 }
 
-/* =======================
-   MARCAÇÃO LIVRE
-======================= */
+/* ===== MARCAÇÃO LIVRE (FUNCIONA DE VERDADE) ===== */
 
 document.addEventListener("keydown", function (e) {
-  const selection = window.getSelection();
-  if (!selection || selection.isCollapsed) return;
+  if (!e.altKey) return;
 
-  let classe = null;
+  let cor = null;
+  if (e.key === "1") cor = "highlight-yellow";
+  if (e.key === "2") cor = "highlight-green";
+  if (e.key === "3") cor = "highlight-blue";
 
-  if (e.altKey && e.key === "1") classe = "highlight-yellow";
-  if (e.altKey && e.key === "2") classe = "highlight-green";
-  if (e.altKey && e.key === "3") classe = "highlight-blue";
+  if (!cor) return;
 
-  if (!classe) return;
-
-  const range = selection.getRangeAt(0);
-  const span = document.createElement("span");
-  span.className = classe;
-
-  range.surroundContents(span);
-  selection.removeAllRanges();
+  document.execCommand("hiliteColor", false,
+    cor === "highlight-yellow" ? "#fff59d" :
+    cor === "highlight-green"  ? "#c8e6c9" :
+                                 "#bbdefb"
+  );
 });
