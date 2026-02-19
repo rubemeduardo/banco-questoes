@@ -1253,8 +1253,411 @@
       "fonte_gabarito": "Arts. 19 e 20 da LRF",
       "comentario_admin": "O limite global do Executivo municipal é 54% da RCL.",
       "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+  {
+    "id": 61,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q61] A execução de nova despesa corrente criada por lei para execução mandatória por quatro anos não poderá ter início até que se implemente o aumento permanente de receita ou a redução permanente de despesa para fins de compensação financeira do seu impacto.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 62,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q62] A renúncia de receita compreende anistia, remissão, subsídio, crédito presumido, concessão de isenção em caráter geral, alteração de alíquota ou modificação de base de cálculo que implique redução indiscriminada de tributos ou contribuições.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 63,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q63] O anexo de riscos fiscais da lei de diretrizes orçamentárias (LDO) deve conter demonstrativo da estimativa e compensação da renúncia de receita e da margem de expansão das despesas obrigatórias de caráter continuado.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 64,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q64] Presentes as disposições da Lei de Responsabilidade Fiscal, é correto afirmar que:**",
+    "alternativas": {
+      "A": "Aumentos de despesa com pessoal são permitidos nos últimos 180 dias do mandato.",
+      "B": "O regime de nulidades não se estende às reestruturações aprovadas em mandato anterior.",
+      "C": "Nomeação de aprovados em concurso é sempre vedada nos últimos 180 dias.",
+      "D": "As restrições não se aplicam em caso de reeleição.",
+      "E": "Atos que aumentem despesa com pessoal com parcelas após o mandato são nulos de pleno direito."
     }
-  ]
+  },
+  {
+    "id": 65,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q65] Sobre benefício tributário de caráter não geral e seu impacto orçamentário-financeiro, assinale a alternativa correta:**",
+    "alternativas": {
+      "A": "Produz efeitos apenas no exercício seguinte.",
+      "B": "Pode entrar em vigor no mesmo exercício se houver medidas de compensação previstas em lei.",
+      "C": "Dispensa compensação se não afetar metas fiscais.",
+      "D": "Deve respeitar noventena e neutralidade obrigatória.",
+      "E": "Só entra em vigor após compensação, vedado aumento de tributos."
+    }
+  },
+  {
+    "id": 66,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q66] A execução orçamentária e financeira deverá identificar os beneficiários de pagamentos de sentenças judiciais para observância da ordem cronológica dos precatórios.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 67,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q67] Os contratos de terceirização de mão de obra que substituam servidores são contabilizados como despesa de custeio.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 68,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q68] A extinção da Taxa de Manejo de Resíduos Sólidos configura renúncia de receita e exige:**",
+    "alternativas": {
+      "A": "Estimativa de impacto no exercício e nos dois seguintes.",
+      "B": "Previsão apenas na LOA seguinte.",
+      "C": "Estimativa somente no exercício corrente.",
+      "D": "Sanção automática por infração à LRF.",
+      "E": "Nenhuma providência se houver superávit."
+    }
+  },
+  {
+    "id": 69,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q69] À luz da LRF, é correto afirmar que:**",
+    "alternativas": {
+      "A": "A seleção será válida se houver reeleição.",
+      "B": "O envio do projeto será nulo, ainda que aprovado.",
+      "C": "A seleção será nula se importar aumento de despesa.",
+      "D": "O aumento será válido se previsto na LDO.",
+      "E": "Os atos são válidos por decisão do STF."
+    }
+  },
+  {
+    "id": 70,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q70] O Poder Executivo pode promover limitação de empenho inclusive em relação aos demais Poderes, caso estes não realizem o contingenciamento necessário.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 71,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q71] A concessão de benefício fiscal com renúncia de receita exige estimativa de impacto e pode ser validada apenas com medidas de compensação por aumento de receita.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 72,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q72] A despesa total com pessoal é apurada com base nas remunerações brutas, admitida dedução apenas da parcela custeada para cobertura de déficit previdenciário.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 73,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q73] A compensação de despesa obrigatória continuada pode ocorrer por redução de despesa ou aumento permanente de receita, inclusive por transação tributária.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 74,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q74] A exigência de projeção de metas fiscais por 10 anos aplica-se igualmente a estados e municípios.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 75,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q75] De acordo com a LRF, o projeto de LOA:**",
+    "alternativas": {
+      "A": "Define reserva com base na RCL do exercício anterior.",
+      "B": "Define reserva com base na RCL de dois anos antes.",
+      "C": "Exclui despesas primárias do resultado.",
+      "D": "Contém demonstrativo de compatibilidade com o Anexo de Metas Fiscais.",
+      "E": "Estabelece metas fiscais plurianuais."
+    }
+  },
+  {
+    "id": 76,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q76] Para apuração da Receita Corrente Líquida, consideram-se:**",
+    "alternativas": {
+      "A": "Serviços e atividades financeiras.",
+      "B": "Impostos, taxas e contribuições.",
+      "C": "Serviços e contribuições econômicas.",
+      "D": "Receitas financeiras e indenizações.",
+      "E": "Impostos, transferências correntes e contribuições sociais."
+    }
+  },
+  {
+    "id": 77,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q77] Impacta o resultado da execução orçamentária de 2023:**",
+    "alternativas": {
+      "A": "Empenho de amortização de dívida.",
+      "B": "Pagamento de despesa de exercício anterior.",
+      "C": "Distribuição gratuita de bens do estoque.",
+      "D": "Alienação a prazo com arrecadação posterior.",
+      "E": "ARO obtida no exercício."
+    }
+  },
+  {
+    "id": 78,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q78] O Quadro Principal do Balanço Orçamentário evidencia:**",
+    "alternativas": {
+      "A": "Pagamentos de restos a pagar.",
+      "B": "Doações como receita de capital.",
+      "C": "Diferença entre empenhado e pago como saldo.",
+      "D": "Receitas patrimoniais arrecadadas.",
+      "E": "Cancelamento de restos a pagar como receita."
+    }
+  },
+  {
+    "id": 79,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q79] O limite de despesa com pessoal do Poder Legislativo é:**",
+    "alternativas": {
+      "A": "810.000",
+      "B": "1.350.000",
+      "C": "1.620.000",
+      "D": "22.500.000",
+      "E": "27.000.000"
+    }
+  },
+  {
+    "id": 80,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q80] O anexo de metas fiscais integra a lei de diretrizes orçamentárias.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 81,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q81] Na lei orçamentária anual deve constar ao menos uma parcela das despesas da dívida pública.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 82,
+    "tipo": "certo_errado",
+    "enunciado": "**[Q82] É dispensável a previsão de reserva de contingência na proposta da LOA.**",
+    "alternativas": ["Certo", "Errado"]
+  },
+  {
+    "id": 83,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q83] O reconhecimento contábil envolve:**",
+    "alternativas": {
+      "A": "Avaliação da incerteza.",
+      "B": "Mensuração das características quantitativas.",
+      "C": "Determinação do benefício orçamentário.",
+      "D": "Qualificação da existência e mensuração.",
+      "E": "Aferição do benefício fiscal."
+    }
+  },
+  {
+    "id": 84,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q84] Nas demonstrações conjuntas, excluem-se:**",
+    "alternativas": {
+      "A": "Operações de crédito externo.",
+      "B": "Limites de restos a pagar.",
+      "C": "Concessões de garantias.",
+      "D": "Encargos licitatórios.",
+      "E": "Operações intragovernamentais."
+    }
+  },
+  {
+    "id": 85,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q85] A escrituração das contas públicas observa:**",
+    "alternativas": {
+      "A": "Regime de competência e caixa complementar.",
+      "B": "Procedimentos patrimoniais.",
+      "C": "Regime de caixa.",
+      "D": "Procedimentos orçamentários.",
+      "E": "Regime misto extraordinário."
+    }
+  },
+  {
+    "id": 86,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q86] O limite de despesa com pessoal do Judiciário é:**",
+    "alternativas": {
+      "A": "10,0 milhões",
+      "B": "11,1 milhões",
+      "C": "16,2 milhões",
+      "D": "22,2 milhões",
+      "E": "30,0 milhões"
+    }
+  },
+  {
+    "id": 87,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q87] Para apuração da RCL, deduzem-se:**",
+    "alternativas": {
+      "A": "Transferências constitucionais da União.",
+      "B": "Valores da LC 87/96.",
+      "C": "Receitas de autarquias.",
+      "D": "Receitas patrimoniais.",
+      "E": "Receita industrial."
+    }
+  },
+  {
+    "id": 88,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q88] É forma de renúncia de receita:**",
+    "alternativas": {
+      "A": "Aumento da base tributária",
+      "B": "Crédito presumido",
+      "C": "Depósito compulsório",
+      "D": "Juros negativos",
+      "E": "Financiamento do déficit"
+    }
+  },
+  {
+    "id": 89,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q89] A LRF dedica capítulo ao tema:**",
+    "alternativas": {
+      "A": "Contábil e financeiro",
+      "B": "Controle interno",
+      "C": "Licitações",
+      "D": "Controle externo",
+      "E": "Planejamento com responsabilidade fiscal"
+    }
+  },
+  {
+    "id": 90,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q90] Configura ato de improbidade contra princípios:**",
+    "alternativas": {
+      "A": "Enriquecimento ilícito",
+      "B": "Benefício fiscal irregular",
+      "C": "Vantagem econômica",
+      "D": "Negar publicidade a atos oficiais",
+      "E": "Revelar segredo funcional"
+    }
+  },
+  {
+    "id": 91,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q91] Sobre dívida ativa, é correto:**",
+    "alternativas": {
+      "A": "II e III",
+      "B": "II",
+      "C": "I",
+      "D": "I e II",
+      "E": "I, II e III"
+    }
+  },
+  {
+    "id": 92,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q92] As metas do Anexo de Metas Fiscais incluem:**",
+    "alternativas": {
+      "A": "I",
+      "B": "II",
+      "C": "I e II",
+      "D": "I e III",
+      "E": "II e III"
+    }
+  },
+  {
+    "id": 93,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q93] Está correto o que se afirma em:**",
+    "alternativas": {
+      "A": "I a V",
+      "B": "I e III",
+      "C": "II e IV",
+      "D": "I, IV e V",
+      "E": "II, III e V"
+    }
+  },
+  {
+    "id": 94,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q94] A sequência correta é:**",
+    "alternativas": {
+      "A": "F, V, F, V, F",
+      "B": "V, F, V, F, V",
+      "C": "F, F, V, V, F",
+      "D": "V, V, F, F, V",
+      "E": "F, F, F, V, V"
+    }
+  },
+  {
+    "id": 95,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q95] Ana Clara responderá, respectivamente, por:**",
+    "alternativas": {
+      "A": "Prejuízo ao erário em ambos",
+      "B": "Prejuízo e enriquecimento",
+      "C": "Violação a princípios",
+      "D": "Prejuízo e violação a princípios",
+      "E": "Violação e prejuízo"
+    }
+  },
+  {
+    "id": 96,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q96] Deve reconhecer e divulgar, respectivamente:**",
+    "alternativas": {
+      "A": "0 – 350.000",
+      "B": "150.000 – 0",
+      "C": "200.000 – 150.000",
+      "D": "200.000 – 450.000",
+      "E": "350.000 – 650.000"
+    }
+  },
+  {
+    "id": 97,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q97] A relação despesa/RCL:**",
+    "alternativas": {
+      "A": "Veda revisão geral",
+      "B": "Abaixo do alerta",
+      "C": "Ultrapassa limite máximo",
+      "D": "Abaixo do prudencial",
+      "E": "Veda criação de cargos"
+    }
+  },
+  {
+    "id": 98,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q98] Sobre OSCs, é correto:**",
+    "alternativas": {
+      "A": "Menor Estado, maior sociedade",
+      "B": "Atuam sem financiamento",
+      "C": "Parcerias homogêneas",
+      "D": "Sem impacto democrático",
+      "E": "OSCs estruturadas monitoram governos"
+    }
+  },
+  {
+    "id": 99,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q99] O Tribunal de Contas:**",
+    "alternativas": {
+      "A": "Pode revogar atos",
+      "B": "Pode anular e revogar",
+      "C": "Revoga por interesse público",
+      "D": "Não pode revogar atos discricionários",
+      "E": "Não pode anular atos viciados"
+    }
+  },
+  {
+    "id": 100,
+    "tipo": "multipla_escolha",
+    "enunciado": "**[Q100] De acordo com a LRF, é correto afirmar que:**",
+    "alternativas": {
+      "A": "A renúncia exige impacto pelo período de vigência",
+      "B": "Toda renúncia exige compensação",
+      "C": "Parcelamento é renúncia",
+      "D": "Câmbio dispensa estimativa",
+      "E": "Compensação dispensa anterioridade"
+    }
+]
 
   
+  
+
 
