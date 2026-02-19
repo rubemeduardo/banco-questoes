@@ -1,47 +1,36 @@
-/* ===== ALTERNATIVAS ===== */
-
 .alternativa {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  padding: 8px 36px 8px 10px;
-  margin: 6px 0;
+  padding: 10px;
   border-radius: 6px;
-  border: 1px solid #ddd;
+  margin-bottom: 6px;
   cursor: pointer;
-  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.alternativa:hover {
-  background-color: #f6f6f6;
+.alternativa.selecionada {
+  background: #e3f2fd;
 }
 
-/* TEXTO DA ALTERNATIVA */
-.alternativa .texto {
-  flex: 1;
-  line-height: 1.5;
+.alternativa.correta {
+  background: #c8e6c9;
 }
 
-/* X DE MARCAR ERRADA */
-.alternativa .marcar-errada {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  font-weight: bold;
-  color: #b00020;
-  cursor: pointer;
-  display: none;
-  user-select: none;
+.alternativa.errada {
+  background: #ffcdd2;
 }
 
-/* MOSTRA O X SOMENTE NO HOVER */
-.alternativa:hover .marcar-errada {
-  display: inline;
-}
-
-/* ALTERNATIVA TACHADA */
 .alternativa.tachada .texto {
   text-decoration: line-through;
-  color: #999;
-  opacity: 0.8;
+  opacity: 0.7;
+}
+
+.marcar-errada {
+  visibility: hidden;
+  color: #b00020;
+  font-weight: bold;
+}
+
+.alternativa:hover .marcar-errada {
+  visibility: visible;
 }
