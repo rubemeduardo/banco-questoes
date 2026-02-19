@@ -1,23 +1,35 @@
+let total = 0;
+let acertos = 0;
+let erros = 0;
+
 fetch("questoes.json")
-  .then(response => response.json())
+  .then(r => r.json())
   .then(questoes => {
+    total = questoes.length;
+
     const container = document.getElementById("questoes");
+    const placar = document.getElementById("placar");
+
+    function atualizarPlacar() {
+      placar.textContent = `Acertos: ${acertos} | Erros: ${erros} | Total: ${total}`;
+    }
+
+    atualizarPlacar();
 
     questoes.forEach(q => {
       let respostaSelecionada = null;
       let respondida = false;
+      let marcadaDuvida = false;
 
       const bloco = document.createElement("div");
       bloco.className = "questao";
       bloco.style.border = "1px solid #ccc";
-      bloco.style.padding = "12px";
+      bloco.style.padding = "15px";
       bloco.style.marginBottom = "20px";
 
       // ID
       const id = document.createElement("div");
-      id.textContent = `Questão ${q.id}`;
-      id.style.fontWeight = "bold";
-      id.style.marginBottom = "6px";
+      id.innerHTML = `<strong>ID ${q.id}</strong>`;
       bloco.appendChild(id);
 
       // Enunciado
@@ -29,58 +41,106 @@ fetch("questoes.json")
       const lista = document.createElement("div");
 
       Object.entries(q.alternativas).forEach(([letra, texto]) => {
+        const linha = document.createElement("div");
+        linha.style.display = "flex";
+        linha.style.alignItems = "center";
+        linha.style.marginBottom = "6px";
+
         const botao = document.createElement("button");
         botao.textContent = `${letra}) ${texto}`;
-        botao.style.display = "block";
-        botao.style.margin = "6px 0";
-        botao.style.width = "100%";
+        botao.style.flex = "1";
         botao.style.textAlign = "left";
 
+        // selecionar alternativa
         botao.onclick = () => {
           if (respondida) return;
 
           respostaSelecionada = letra;
 
-          // limpa seleção visual
           lista.querySelectorAll("button").forEach(b => {
             b.style.backgroundColor = "";
           });
 
-          // marca a selecionada
           botao.style.backgroundColor = "#d0ebff";
         };
 
-        lista.appendChild(botao);
+        // riscar alternativa
+        const riscar = document.createElement("button");
+        riscar.textContent = "❌";
+        riscar.style.marginLeft = "5px";
+
+        riscar.onclick = () => {
+          if (respondida) return;
+
+          botao.style.textDecoration =
+            botao.style.textDecoration === "line-through"
+              ? "none"
+              : "line-through";
+        };
+
+        linha.appendChild(botao);
+        linha.appendChild(riscar);
+        lista.appendChild(linha);
       });
 
       bloco.appendChild(lista);
 
       // Botão responder
-      const btnResponder = document.createElement("button");
-      btnResponder.textContent = "Responder";
-      btnResponder.style.marginTop = "10px";
+      const responder = document.createElement("button");
+      responder.textContent = "Responder";
+      responder.style.marginTop = "10px";
 
-      btnResponder.onclick = () => {
+      responder.onclick = () => {
         if (respondida) return;
 
         if (!respostaSelecionada) {
-          alert("Selecione uma alternativa antes de responder.");
+          alert("Selecione uma alternativa.");
           return;
         }
 
         respondida = true;
 
-        // trava alternativas
-        lista.querySelectorAll("button").forEach(b => {
-          b.disabled = true;
-        });
+        lista.querySelectorAll("button").forEach(b => b.disabled = true);
+        responder.disabled = true;
+        responder.textContent = "Respondida";
 
-        btnResponder.disabled = true;
-        btnResponder.textContent = "Respondida";
+        if (q.gabarito) {
+          if (respostaSelecionada === q.gabarito) {
+            acertos++;
+          } else {
+            erros++;
+          }
+
+          lista.querySelectorAll("button").forEach(b => {
+            if (b.textContent.startsWith(q.gabarito)) {
+              b.style.backgroundColor = "#d3f9d8";
+            }
+            if (
+              b.textContent.startsWith(respostaSelecionada) &&
+              respostaSelecionada !== q.gabarito
+            ) {
+              b.style.backgroundColor = "#ffa8a8";
+            }
+          });
+
+          atualizarPlacar();
+        }
       };
 
-      bloco.appendChild(btnResponder);
+      // Botão dúvida
+      const duvida = document.createElement("button");
+      duvida.textContent = "📌 Marcar dúvida";
+      duvida.style.marginLeft = "10px";
+
+      duvida.onclick = () => {
+        marcadaDuvida = !marcadaDuvida;
+        bloco.style.border = marcadaDuvida ? "2px solid orange" : "1px solid #ccc";
+        duvida.textContent = marcadaDuvida ? "📌 Dúvida marcada" : "📌 Marcar dúvida";
+      };
+
+      bloco.appendChild(responder);
+      bloco.appendChild(duvida);
+
       container.appendChild(bloco);
     });
-  })
-  .catch(err => console.error(err));
+  });
