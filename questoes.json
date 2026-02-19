@@ -180,9 +180,226 @@
     "acertos": 0,
     "erros": 0
   }
-}
+},
+    {
+      "id": 8,
+      "area": "Administração Financeira e Orçamentária",
+      "tema": "Princípios Orçamentários",
+      "subtema": "Equilíbrio Orçamentário e LRF",
+      "ano": 2025,
+      "banca": "CESPE/CEBRASPE",
+      "orgao": "TJ-PA",
+      "prova": "CESPE / CEBRASPE - 2025 - TJ-PA - Analista Judiciário - Área Administrativa",
+      "enunciado": "O fato de, na execução orçamentária de um município, não se respeitarem os limites definidos na Lei de Responsabilidade Fiscal (LRF) configura o descumprimento do princípio do equilíbrio orçamentário, ainda que a arrecadação do período seja superior às estimativas iniciais.",
+      "alternativas": {
+        "A": "Certo",
+        "B": "Errado"
+      },
+      "gabarito": "A",
+      "fonte_gabarito": "Princípio do equilíbrio orçamentário e limites da LRF",
+      "comentario_admin": "O equilíbrio orçamentário exige observância dos limites legais, independentemente de arrecadação superior ao previsto.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 9,
+      "area": "Direito Financeiro",
+      "tema": "Despesa com Pessoal",
+      "subtema": "RCL e Limites da LRF",
+      "ano": 2025,
+      "banca": "VUNESP",
+      "orgao": "Câmara de Tatuí - SP",
+      "prova": "VUNESP - 2025 - Câmara de Tatuí - SP - Analista Legislativo - Controle Interno",
+      "enunciado": "Considerando a RCL de R$ 584,49 milhões e a despesa com pessoal de R$ 257,63 milhões, é correto afirmar que a despesa total com pessoal da Prefeitura de Tatuí",
+      "alternativas": {
+        "A": "está abaixo do porcentual máximo de 50%.",
+        "B": "está abaixo do porcentual máximo de 60%.",
+        "C": "excedeu o porcentual máximo de 40,9%.",
+        "D": "excedeu o porcentual máximo de 49%.",
+        "E": "está abaixo do porcentual máximo de 54%."
+      },
+      "gabarito": "E",
+      "fonte_gabarito": "Art. 19 e 20 da LRF",
+      "comentario_admin": "A despesa representa cerca de 44%, abaixo do limite máximo municipal de 54%.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 10,
+      "area": "Administração Financeira e Orçamentária",
+      "tema": "Despesa Pública",
+      "subtema": "Limite do Legislativo Municipal",
+      "ano": 2025,
+      "banca": "VUNESP",
+      "orgao": "Câmara de Tatuí - SP",
+      "prova": "VUNESP - 2025 - Câmara de Tatuí - SP - Analista Legislativo - Controle Interno",
+      "enunciado": "Considerando-se que um município possui receita corrente líquida de R$ 500 milhões, a despesa total com pessoal para o poder Legislativo, em cada período de apuração, não poderá exceder",
+      "alternativas": {
+        "A": "R$ 10 milhões.",
+        "B": "R$ 12,5 milhões.",
+        "C": "R$ 15 milhões.",
+        "D": "R$ 25 milhões.",
+        "E": "R$ 30 milhões."
+      },
+      "gabarito": "A",
+      "fonte_gabarito": "Art. 20, III, a, da LRF (2%)",
+      "comentario_admin": "O limite do Legislativo municipal é 2% da RCL.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 11,
+      "area": "Administração Financeira e Orçamentária",
+      "tema": "Despesa com Pessoal",
+      "subtema": "Base de Cálculo da RCL",
+      "ano": 2025,
+      "banca": "FCC",
+      "orgao": "TRF - 4ª Região",
+      "prova": "FCC - 2025 - TRF - 4ª Região - Técnico Judiciário - Contabilidade",
+      "enunciado": "A verificação do limite global da despesa total com pessoal deve utilizar como base a receita",
+      "alternativas": {
+        "A": "corrente líquida, considerando receitas com impostos, serviços, cauções e taxas.",
+        "B": "corrente líquida, considerando receitas com impostos, aluguéis, juros e indenizações.",
+        "C": "corrente total arrecadada.",
+        "D": "orçamentária total arrecadada com impostos, serviços, cauções e taxas.",
+        "E": "orçamentária total arrecadada com contribuições, transferências e serviços."
+      },
+      "gabarito": "A",
+      "fonte_gabarito": "Art. 2º, IV, da LRF",
+      "comentario_admin": "A base é a Receita Corrente Líquida, conforme definição legal.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 12,
+      "area": "Administração Financeira e Orçamentária",
+      "tema": "Despesa com Pessoal",
+      "subtema": "Limites Municipais",
+      "ano": 2025,
+      "banca": "VUNESP",
+      "orgao": "Câmara da Estância Balneária de Praia Grande - SP",
+      "prova": "VUNESP - 2025 - Câmara da Estância Balneária de Praia Grande - SP - Analista em Gestão Pública",
+      "enunciado": "A despesa total com pessoal, para os municípios, não poderá exceder o percentual da receita corrente líquida de",
+      "alternativas": {
+        "A": "50%, com repartição entre poderes.",
+        "B": "50%, sendo 6% Legislativo e 44% Executivo.",
+        "C": "60%, sendo 6% Legislativo, 4% MP e 50% Executivo.",
+        "D": "60%, sendo 4% Legislativo, 2% TCE e 54% Executivo.",
+        "E": "60%, sendo 6% Legislativo e 54% Executivo."
+      },
+      "gabarito": "E",
+      "fonte_gabarito": "Art. 19 e 20 da LRF",
+      "comentario_admin": "O limite global municipal é 60%, com repartição 6% Legislativo e 54% Executivo.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 13,
+      "area": "Administração Pública",
+      "tema": "Ciclo de Gestão do Governo Federal",
+      "subtema": "LOA, PPA e LDO",
+      "ano": 2025,
+      "banca": "VUNESP",
+      "orgao": "Câmara da Estância Balneária de Praia Grande - SP",
+      "prova": "VUNESP - 2025 - Câmara da Estância Balneária de Praia Grande - SP - Analista em Gestão Pública",
+      "enunciado": "Na lei orçamentária anual (LOA) deve(m) constar",
+      "alternativas": {
+        "A": "os anexos de metas fiscais.",
+        "B": "dotação para investimento sem previsão no PPA.",
+        "C": "todas despesas da dívida pública.",
+        "D": "os anexos de riscos fiscais.",
+        "E": "as diretrizes, objetivos e metas da administração."
+      },
+      "gabarito": "C",
+      "fonte_gabarito": "Art. 165 da CF",
+      "comentario_admin": "A LOA deve conter despesas e receitas, inclusive da dívida pública.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 14,
+      "area": "Administração Financeira e Orçamentária",
+      "tema": "Orçamento Público",
+      "subtema": "Marco Fiscal de Médio Prazo",
+      "ano": 2025,
+      "banca": "VUNESP",
+      "orgao": "Câmara da Estância Balneária de Praia Grande - SP",
+      "prova": "VUNESP - 2025 - Câmara da Estância Balneária de Praia Grande - SP - Analista em Gestão Pública",
+      "enunciado": "Os entes subnacionais podem adotar, no Anexo de Metas Fiscais, o instrumento denominado",
+      "alternativas": {
+        "A": "marco fiscal de médio prazo (MFMP).",
+        "B": "plano plurianual (PPA).",
+        "C": "lei de diretrizes orçamentárias (LDO).",
+        "D": "relatório de gestão fiscal (RGF).",
+        "E": "relatório resumido da execução orçamentária (RREO)."
+      },
+      "gabarito": "A",
+      "fonte_gabarito": "Alterações recentes na LRF",
+      "comentario_admin": "O MFMP foi incorporado ao Anexo de Metas Fiscais.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 15,
+      "area": "Administração Financeira e Orçamentária",
+      "tema": "Princípios da LRF",
+      "subtema": "Transparência e Controle",
+      "ano": 2025,
+      "banca": "VUNESP",
+      "orgao": "Câmara da Estância Balneária de Praia Grande - SP",
+      "prova": "VUNESP - 2025 - Câmara da Estância Balneária de Praia Grande - SP - Agente de Contratação",
+      "enunciado": "Entre os princípios estabelecidos pela Lei de Responsabilidade Fiscal, destaca-se",
+      "alternativas": {
+        "A": "a exclusão do planejamento plurianual.",
+        "B": "a flexibilidade para aumento de despesas.",
+        "C": "a transparência da gestão fiscal e o controle das contas públicas.",
+        "D": "a liberdade para exceder limites no último ano.",
+        "E": "a prioridade a programas de governo."
+      },
+      "gabarito": "C",
+      "fonte_gabarito": "Art. 1º da LRF",
+      "comentario_admin": "A LRF tem como pilares a transparência e o controle.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 16,
+      "area": "Direito Financeiro",
+      "tema": "Lei de Responsabilidade Fiscal",
+      "subtema": "Gestão Fiscal",
+      "ano": 2025,
+      "banca": "VUNESP",
+      "orgao": "Câmara da Estância Balneária de Praia Grande - SP",
+      "prova": "VUNESP - 2025 - Câmara da Estância Balneária de Praia Grande - SP - Agente de Contratação",
+      "enunciado": "A responsabilidade na gestão fiscal pressupõe",
+      "alternativas": {
+        "A": "exclusivamente o equilíbrio nominal.",
+        "B": "controle exclusivo da dívida.",
+        "C": "ação planejada e transparente, com prevenção de riscos.",
+        "D": "redução obrigatória de tributos.",
+        "E": "desvinculação do planejamento."
+      },
+      "gabarito": "C",
+      "fonte_gabarito": "Art. 1º, §1º, da LRF",
+      "comentario_admin": "A gestão fiscal responsável exige planejamento, transparência e prevenção.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 17,
+      "area": "Administração Financeira e Orçamentária",
+      "tema": "Despesa com Pessoal",
+      "subtema": "Terceirização",
+      "ano": 2025,
+      "banca": "CESPE/CEBRASPE",
+      "orgao": "PGE-PI",
+      "prova": "CESPE / CEBRASPE - 2025 - PGE-PI - Procurador do Estado Substituto",
+      "enunciado": "Lei estadual que exclua do cômputo das despesas com pessoal contratos de terceirização é",
+      "alternativas": {
+        "A": "inconstitucional, por violar a Constituição.",
+        "B": "constitucional, por convergência normativa.",
+        "C": "inconstitucional, por violar a LRF.",
+        "D": "constitucional, por lacuna normativa.",
+        "E": "constitucional, por consonância com a LRF."
+      },
+      "gabarito": "C",
+      "fonte_gabarito": "Jurisprudência e LRF",
+      "comentario_admin": "A LRF é norma geral e impede exclusão ampla de ter_
+
 
 ]
+
 
 
 
