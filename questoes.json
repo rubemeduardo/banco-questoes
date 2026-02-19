@@ -2632,8 +2632,267 @@
       "Estágio Financeiro"
     ],
     "gabarito": "C"
+  },
+  {
+    "id": 181,
+    "tipo": "multipla",
+    "enunciado": "O texto caracteriza, respectivamente, as seguintes classificações da despesa pública:",
+    "alternativas": [
+      "institucional, funcional e por natureza da despesa",
+      "por natureza da despesa, institucional e funcional",
+      "funcional, institucional e por natureza da despesa",
+      "institucional, por natureza da despesa e funcional",
+      "esfera orçamentária, funcional e institucional"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 182,
+    "tipo": "multipla",
+    "enunciado": "Considerando a situação hipotética de calamidade pública, assinale a opção correta, de acordo com a Lei de Responsabilidade Fiscal.",
+    "alternativas": [
+      "Dispensa do atingimento dos resultados fiscais e dos requisitos para criação de despesa",
+      "Dispensa apenas do atingimento dos resultados fiscais",
+      "Suspensão dos prazos de despesa com pessoal, sem dispensa dos resultados fiscais",
+      "Suspensão dos prazos de despesa com pessoal e dispensa dos requisitos para criação de despesa destinada ao combate da calamidade",
+      "Dispensa apenas dos requisitos para criação de despesa"
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 183,
+    "tipo": "multipla",
+    "enunciado": "Na Demonstração dos Fluxos de Caixa, o valor recebido em 2023 referente à solução de litígio relacionado à compra de computadores deve ser reconhecido como fluxo de caixa:",
+    "alternativas": [
+      "gerado pela atividade operacional",
+      "gerado pela atividade de investimento",
+      "consumido pela atividade de investimento",
+      "gerado pela atividade de financiamento",
+      "não reconhecido"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 184,
+    "tipo": "multipla",
+    "enunciado": "A demonstração contábil ilustrada no apêndice da NBC TSP 11 corresponde à:",
+    "alternativas": [
+      "Demonstração dos Fluxos de Caixa",
+      "Demonstração do Resultado do Exercício",
+      "Demonstração das Variações Patrimoniais",
+      "Demonstração das Mutações do Patrimônio Líquido",
+      "Balanço Patrimonial"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 185,
+    "tipo": "multipla",
+    "enunciado": "Os valores aplicados em investimentos que evidenciam o efeito econômico da despesa e o detalhamento do que será desenvolvido podem ser evidenciados por meio das categorias:",
+    "alternativas": [
+      "categorias econômicas e estrutura programática (ação)",
+      "estrutura programática (programa) e grupos de natureza de despesa",
+      "classificação funcional (subfunção) e estrutura programática (metas)",
+      "grupos de natureza de despesa e classificação funcional (subfunção)",
+      "modalidade de aplicação e estrutura programática (forma de implementação)"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 186,
+    "tipo": "multipla",
+    "enunciado": "A reversão do ajuste a valor presente reconhecida na Demonstração do Resultado do Exercício deve ser registrada como:",
+    "alternativas": [
+      "Receita financeira",
+      "Receita operacional",
+      "Despesa financeira",
+      "Despesa operacional",
+      "Outra despesa operacional"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 187,
+    "tipo": "multipla",
+    "enunciado": "O desequilíbrio em Balanços Orçamentários não consolidados deve ser:",
+    "alternativas": [
+      "reforçado por relatório especial",
+      "complementado pelo Balanço Financeiro",
+      "evidenciado em balanço orçamentário adicional",
+      "evidenciado por nota explicativa",
+      "complementado pela DMPL"
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 188,
+    "tipo": "multipla",
+    "enunciado": "Segundo o MCASP, a informação exposta e as evidenciações nas demonstrações contábeis encontram-se, respectivamente:",
+    "alternativas": [
+      "nas notas explicativas e nas demonstrações econômicas",
+      "nas demonstrações contábeis e nas demonstrações econômicas",
+      "nos quadros da demonstração apropriada e nas notas explicativas",
+      "nas demonstrações contábeis e nas demonstrações financeiras",
+      "nas demonstrações econômicas e nas demonstrações financeiras"
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 189,
+    "tipo": "multipla",
+    "enunciado": "Para cobrir o déficit de empresa pública mediante dotação incluída na despesa corrente, o município deve utilizar:",
+    "alternativas": [
+      "inversão financeira",
+      "transferência voluntária",
+      "transferência de capital",
+      "subvenção econômica",
+      "empréstimo público"
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 190,
+    "tipo": "multipla",
+    "enunciado": "As despesas de capital da repartição pública em 2023 totalizaram:",
+    "alternativas": [
+      "R$ 370.000,00",
+      "R$ 420.000,00",
+      "R$ 640.000,00",
+      "R$ 670.000,00",
+      "R$ 940.000,00"
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 191,
+    "tipo": "multipla",
+    "enunciado": "Sobre a conduta culposa de Joaquim, à luz da Lei nº 8.429/1992, é correto afirmar que:",
+    "alternativas": [
+      "configura enriquecimento ilícito",
+      "configura prejuízo ao erário",
+      "configura violação aos princípios",
+      "a penalidade será reduzida pela metade",
+      "não configura improbidade punível"
+    ],
+    "gabarito": "E"
+  },
+  {
+    "id": 192,
+    "tipo": "multipla",
+    "enunciado": "O procedimento contábil adequado para o quadro sem mercado ativo é:",
+    "alternativas": [
+      "baixar o ativo com contrapartida no resultado",
+      "baixar o ativo com contrapartida em ajustes de avaliação patrimonial",
+      "reclassificar para investimentos",
+      "reclassificar para realizável a longo prazo",
+      "revisar vida útil e valor residual"
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": 193,
+    "tipo": "multipla",
+    "enunciado": "Segundo o MCASP, devem constar em Informações Gerais das notas explicativas:",
+    "alternativas": [
+      "ajustes por erros",
+      "natureza das operações e atividades da entidade",
+      "bases de mensuração e políticas contábeis",
+      "passivos contingentes",
+      "julgamentos contábeis"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 194,
+    "tipo": "multipla",
+    "enunciado": "O Resultado Patrimonial do Período totalizou:",
+    "alternativas": [
+      "8.313.000,00",
+      "6.584.000,00",
+      "14.897.000,00",
+      "1.729.000,00",
+      "1.640.000,00"
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": 195,
+    "tipo": "multipla",
+    "enunciado": "Em amostragem estatística, o conjunto completo de dados é denominado:",
+    "alternativas": [
+      "base amostral",
+      "população",
+      "unidade de amostragem",
+      "base de estratificação",
+      "massa"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 196,
+    "tipo": "multipla",
+    "enunciado": "Sobre os Tribunais e Conselhos de Contas Municipais, é correto afirmar que:",
+    "alternativas": [
+      "a CF veda criação e extingue os existentes",
+      "a CF veda criação municipal, mas permite TCMs estaduais",
+      "permite Conselhos Municipais de Contas",
+      "veda extinção por emenda estadual",
+      "exige TCM em municípios com mais de 100 mil habitantes"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 197,
+    "tipo": "multipla",
+    "enunciado": "A relação correta entre entradas de caixa e atividades na DFC é:",
+    "alternativas": [
+      "1 – 2 – 3",
+      "1 – 3 – 2",
+      "2 – 1 – 3",
+      "2 – 3 – 1",
+      "3 – 2 – 1"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 198,
+    "tipo": "multipla",
+    "enunciado": "De acordo com a Lei nº 4.320/1964, é correto afirmar que:",
+    "alternativas": [
+      "não foi recepcionada pela CF",
+      "receitas fora do orçamento devem ter rubricas próprias",
+      "receitas tributárias são de capital",
+      "ARO não pode ser autorizada na LOA",
+      "créditos não tributários não podem ir para dívida ativa"
+    ],
+    "gabarito": "B"
+  },
+  {
+    "id": 199,
+    "tipo": "multipla",
+    "enunciado": "Sobre despesa com pessoal, assinale a alternativa incorreta:",
+    "alternativas": [
+      "apuração em 12 meses pelo regime de competência",
+      "limites de 50% União e 60% Estados e Municípios",
+      "indenizações por demissão devem ser computadas",
+      "inativos e pensionistas devem ser segregados",
+      "terceirização substitutiva é Outras Despesas de Pessoal"
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": 200,
+    "tipo": "multipla",
+    "enunciado": "São despesas orçamentárias, exceto:",
+    "alternativas": [
+      "pagamento de restos a pagar",
+      "depósitos e cauções",
+      "vencimentos e encargos",
+      "juros da dívida",
+      "ARO"
+    ],
+    "gabarito": "B"
   }
 ]
-
 
 
