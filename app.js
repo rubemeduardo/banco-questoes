@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", () => {
+  carregarQuestoes();
+});
+
+/* ======================
+   PROGRESSO DO USUÁRIO
+====================== */
 const PROGRESSO_KEY = "progressoQuestoes";
 
 function obterProgresso() {
@@ -6,19 +13,20 @@ function obterProgresso() {
 
 function salvarProgresso(idQuestao, status) {
   const progresso = obterProgresso();
-  progresso[idQuestao] = status; // "correta" ou "errada"
+  progresso[idQuestao] = status; // correta | errada
   localStorage.setItem(PROGRESSO_KEY, JSON.stringify(progresso));
 }
 
-/* ============================
-   CARREGAMENTO DAS QUESTÕES
-============================ */
+/* ======================
+   CARREGAR QUESTÕES
+====================== */
 async function carregarQuestoes() {
   try {
     const response = await fetch("questoes.json");
     const data = await response.json();
     const questoes = Array.isArray(data) ? data : data.questoes || [];
 
+    const progresso = obterProgresso();
     const container = document.getElementById("questoes");
     container.innerHTML = "";
 
@@ -26,23 +34,32 @@ async function carregarQuestoes() {
       const questaoDiv = document.createElement("div");
       questaoDiv.className = "questao";
 
+      if (progresso[q.id] === "correta") {
+        questaoDiv.classList.add("questao-correta");
+      }
+
+      if (progresso[q.id] === "errada") {
+        questaoDiv.classList.add("questao-errada");
+      }
+
       questaoDiv.innerHTML = `
-        <div class="meta"><strong>Questão ${q.id}</strong></div>
+        <div class="cabecalho-questao">
+          <span class="id-questao">Questão ${q.id}</span>
+        </div>
 
         <p class="enunciado"><strong>${q.enunciado}</strong></p>
 
         <div class="alternativas">
           ${Object.entries(q.alternativas).map(([letra, texto]) => `
-            <div class="alternativa" 
-                 data-letra="${letra}" 
-                 data-questao="${q.id}">
+            <div class="alternativa">
+              <input type="radio" name="questao-${q.id}" value="${letra}">
               <span class="texto"><strong>${letra})</strong> ${texto}</span>
-              <span class="btn-x" title="Marcar como errada">✖</span>
+              <span class="btn-x" onclick="toggleTachado(this)">✖</span>
             </div>
           `).join("")}
         </div>
 
-        <button onclick="responder(${q.id}, '${q.gabarito}')">
+        <button class="btn-responder" onclick="responder(${q.id}, '${q.gabarito}')">
           Responder
         </button>
 
@@ -52,60 +69,24 @@ async function carregarQuestoes() {
       container.appendChild(questaoDiv);
     });
 
-    ativarEventosAlternativas();
-
   } catch (erro) {
     console.error("Erro ao carregar questões:", erro);
-    document.getElementById("questoes").innerHTML =
-      "<p>Erro ao carregar as questões.</p>";
   }
 }
 
-/* ============================
-   SELEÇÃO DE ALTERNATIVAS
-============================ */
-function ativarEventosAlternativas() {
-  document.querySelectorAll(".alternativa").forEach(alt => {
-
-    // Seleção da alternativa
-    alt.addEventListener("click", e => {
-      if (e.target.classList.contains("btn-x")) return;
-
-      const questaoId = alt.dataset.questao;
-      document
-        .querySelectorAll(`.alternativa[data-questao="${questaoId}"]`)
-        .forEach(a => a.classList.remove("selecionada"));
-
-      alt.classList.add("selecionada");
-    });
-
-    // X para tachar alternativa
-    const btnX = alt.querySelector(".btn-x");
-    btnX.addEventListener("click", e => {
-      e.stopPropagation();
-      alt.classList.toggle("tachada");
-    });
-  });
-}
-
-/* ============================
-   CORREÇÃO DA QUESTÃO
-============================ */
+/* ======================
+   RESPONDER QUESTÃO
+====================== */
 function responder(idQuestao, gabarito) {
-  const alternativas = document.querySelectorAll(
-    `.alternativa[data-questao="${idQuestao}"]`
-  );
-
+  const alternativas = document.getElementsByName(`questao-${idQuestao}`);
   let selecionada = null;
 
-  alternativas.forEach(alt => {
-    if (alt.classList.contains("selecionada")) {
-      selecionada = alt;
-    }
-    alt.classList.remove("correta", "incorreta");
+  alternativas.forEach(opcao => {
+    if (opcao.checked) selecionada = opcao.value;
   });
 
   const resultadoDiv = document.getElementById(`resultado-${idQuestao}`);
+  const questaoDiv = resultadoDiv.closest(".questao");
 
   if (!selecionada) {
     resultadoDiv.innerHTML =
@@ -113,64 +94,45 @@ function responder(idQuestao, gabarito) {
     return;
   }
 
-  const letra = selecionada.dataset.letra;
-
-  if (letra === gabarito) {
-    selecionada.classList.add("correta");
+  if (selecionada === gabarito) {
     resultadoDiv.innerHTML =
-      "<span style='color: green; font-weight: bold;'>✔ Resposta correta</span>";
+      "<span style='color: green;'>✔ Resposta correta</span>";
+
+    questaoDiv.classList.add("questao-correta");
+    questaoDiv.classList.remove("questao-errada");
+
+    salvarProgresso(idQuestao, "correta");
   } else {
-    selecionada.classList.add("incorreta");
-
-    alternativas.forEach(alt => {
-      if (alt.dataset.letra === gabarito) {
-        alt.classList.add("correta");
-      }
-    });
-
     resultadoDiv.innerHTML =
-      `<span style='color: red; font-weight: bold;'>
-        ✘ Resposta incorreta. Gabarito: ${gabarito}
-      </span>`;
+      "<span style='color: red;'>✘ Resposta incorreta</span>";
+
+    questaoDiv.classList.add("questao-errada");
+    questaoDiv.classList.remove("questao-correta");
+
+    salvarProgresso(idQuestao, "errada");
   }
 }
 
-/* ============================
-   MARCAÇÃO LIVRE DE TEXTO
-   Alt + 1 (amarelo)
-   Alt + 2 (verde)
-   Alt + 3 (azul)
-============================ */
-document.addEventListener("keydown", function (e) {
-  if (!e.altKey) return;
+/* ======================
+   TACHAR ALTERNATIVA
+====================== */
+function toggleTachado(botaoX) {
+  botaoX.closest(".alternativa").classList.toggle("tachada");
+}
 
-  let classe = null;
-  if (e.key === "1") classe = "highlight-yellow";
-  if (e.key === "2") classe = "highlight-green";
-  if (e.key === "3") classe = "highlight-blue";
+/* ======================
+   FILTROS
+====================== */
+function filtrarQuestoes(tipo) {
+  const progresso = obterProgresso();
+  const questoes = document.querySelectorAll(".questao");
 
-  if (!classe) return;
+  questoes.forEach(q => {
+    const id = q.querySelector(".id-questao").textContent.replace("Questão ", "");
+    const respondida = progresso[id];
 
-  const selection = window.getSelection();
-  if (!selection.rangeCount) return;
-
-  const range = selection.getRangeAt(0);
-  if (range.collapsed) return;
-
-  const span = document.createElement("span");
-  span.className = classe;
-
-  try {
-    range.surroundContents(span);
-  } catch {
-    const fragment = range.extractContents();
-    span.appendChild(fragment);
-    range.insertNode(span);
-  }
-
-  selection.removeAllRanges();
-});
-
-
-
-
+    if (tipo === "todas") q.style.display = "block";
+    if (tipo === "respondidas") q.style.display = respondida ? "block" : "none";
+    if (tipo === "nao") q.style.display = respondida ? "none" : "block";
+  });
+}
