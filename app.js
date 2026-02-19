@@ -1,94 +1,75 @@
-let questoes = [];
-let acertos = 0;
-let respondidas = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  carregarQuestoes();
+});
 
-fetch("questoes.json")
-  .then(res => res.json())
-  .then(dados => {
-    questoes = dados;
-    renderizarQuestoes();
-  })
-  .catch(err => {
-    console.error("Erro ao carregar JSON:", err);
-  });
+async function carregarQuestoes() {
+  try {
+    const response = await fetch("questoes.json");
+    const data = await response.json();
 
-function renderizarQuestoes() {
-  const container = document.getElementById("questoes");
-  const placar = document.getElementById("placar");
+    // Caso o JSON venha em lote { lote:..., questoes: [...] }
+    const questoes = Array.isArray(data) ? data : data.questoes || [];
 
-  container.innerHTML = "";
-  placar.innerHTML = "";
+    const container = document.getElementById("questoes");
+    container.innerHTML = "";
 
-  questoes.forEach(q => {
-    const div = document.createElement("div");
-    div.style.border = "1px solid #ccc";
-    div.style.padding = "15px";
-    div.style.marginBottom = "20px";
+    questoes.forEach(q => {
+      const questaoDiv = document.createElement("div");
+      questaoDiv.className = "questao";
 
-    div.innerHTML = `
-      <h3>Questão ${q.id}</h3>
-      <p><strong>${q.enunciado}</strong></p>
-    `;
+      questaoDiv.innerHTML = `
+        <div class="cabecalho-questao">
+          <span class="id-questao">Questão ${q.id}</span>
+        </div>
 
-    const form = document.createElement("form");
+        <p class="enunciado"><strong>${q.enunciado}</strong></p>
 
-    Object.entries(q.alternativas).forEach(([letra, texto]) => {
-      const label = document.createElement("label");
-      label.style.display = "block";
-      label.style.marginBottom = "5px";
+        <div class="alternativas">
+          ${Object.entries(q.alternativas).map(([letra, texto]) => `
+            <label class="alternativa">
+              <input type="radio" name="questao-${q.id}" value="${letra}">
+              <span><strong>${letra})</strong> ${texto}</span>
+            </label>
+          `).join("")}
+        </div>
 
-      label.innerHTML = `
-        <input type="radio" name="q${q.id}" value="${letra}">
-        <strong>${letra})</strong> ${texto}
+        <button class="btn-responder" onclick="responder(${q.id}, '${q.gabarito}')">
+          Responder
+        </button>
+
+        <div class="resultado" id="resultado-${q.id}"></div>
       `;
 
-      form.appendChild(label);
+      container.appendChild(questaoDiv);
     });
 
-    const botao = document.createElement("button");
-    botao.type = "button";
-    botao.textContent = "Responder";
-
-    botao.onclick = () => corrigir(q, form, botao);
-
-    div.appendChild(form);
-    div.appendChild(botao);
-
-    container.appendChild(div);
-  });
+  } catch (erro) {
+    console.error("Erro ao carregar questões:", erro);
+    document.getElementById("questoes").innerHTML =
+      "<p>Erro ao carregar as questões.</p>";
+  }
 }
 
-function corrigir(questao, form, botao) {
-  const marcada = form.querySelector("input[type=radio]:checked");
+function responder(idQuestao, gabarito) {
+  const alternativas = document.getElementsByName(`questao-${idQuestao}`);
+  let selecionada = null;
 
-  if (!marcada) {
-    alert("Escolha uma alternativa.");
+  alternativas.forEach(opcao => {
+    if (opcao.checked) {
+      selecionada = opcao.value;
+    }
+  });
+
+  const resultadoDiv = document.getElementById(`resultado-${idQuestao}`);
+
+  if (!selecionada) {
+    resultadoDiv.innerHTML = "<span style='color: orange;'>Selecione uma alternativa.</span>";
     return;
   }
 
-  respondidas++;
-
-  if (marcada.value === questao.gabarito) {
-    acertos++;
-    marcada.parentElement.style.color = "green";
+  if (selecionada === gabarito) {
+    resultadoDiv.innerHTML = "<span style='color: green; font-weight: bold;'>✔ Resposta correta</span>";
   } else {
-    marcada.parentElement.style.color = "red";
-
-    const correta = form.querySelector(
-      `input[value="${questao.gabarito}"]`
-    );
-    if (correta) {
-      correta.parentElement.style.color = "green";
-    }
+    resultadoDiv.innerHTML = `<span style='color: red; font-weight: bold;'>✘ Resposta incorreta. Gabarito: ${gabarito}</span>`;
   }
-
-  botao.disabled = true;
-  atualizarPlacar();
-}
-
-function atualizarPlacar() {
-  document.getElementById("placar").innerHTML = `
-    <strong>Respondidas:</strong> ${respondidas} |
-    <strong>Acertos:</strong> ${acertos}
-  `;
 }
