@@ -46,6 +46,7 @@ function renderizarAlternativas(q) {
     .map(([letra, texto]) => `
       <div class="alternativa"
            data-letra="${letra}"
+           data-questao="${q.id}"
            onclick="selecionarAlternativa(this)">
         <span class="texto"><strong>${letra})</strong> ${texto}</span>
         <span class="marcar-errada" onclick="toggleTachado(event, this)">✖</span>
@@ -113,4 +114,5 @@ function toggleTachado(event, botao) {
   event.stopPropagation();
   botao.closest(".alternativa").classList.toggle("tachada");
 }
+
 
