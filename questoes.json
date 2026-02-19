@@ -182,6 +182,9 @@
   }
 },
     {
+  "lote": "ids_8_a_20",
+  "questoes": [
+    {
       "id": 8,
       "area": "Administração Financeira e Orçamentária",
       "tema": "Princípios Orçamentários",
@@ -395,10 +398,73 @@
       },
       "gabarito": "C",
       "fonte_gabarito": "Jurisprudência e LRF",
-      "comentario_admin": "A LRF é norma geral e impede exclusão ampla de ter_
+      "comentario_admin": "A LRF é norma geral e impede exclusão ampla de terceirizados.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 18,
+      "area": "Direito Financeiro",
+      "tema": "Planejamento e Orçamento",
+      "subtema": "Anexos da LDO",
+      "ano": 2025,
+      "banca": "CESPE/CEBRASPE",
+      "orgao": "CAU-MG",
+      "prova": "CESPE / CEBRASPE - 2025 - CAU-MG - Contador",
+      "enunciado": "A avaliação do cumprimento de metas do exercício anterior integra o anexo de riscos fiscais da LDO.",
+      "alternativas": {
+        "A": "Certo",
+        "B": "Errado"
+      },
+      "gabarito": "B",
+      "fonte_gabarito": "Art. 4º da LRF",
+      "comentario_admin": "A avaliação integra o Anexo de Metas Fiscais, não o de riscos.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 19,
+      "area": "Direito Financeiro",
+      "tema": "Despesa Pública",
+      "subtema": "Despesa Obrigatória Continuada",
+      "ano": 2025,
+      "banca": "FCC",
+      "orgao": "SEFAZ-PI",
+      "prova": "FCC - 2025 - SEFAZ-PI - Analista do Tesouro Estadual",
+      "enunciado": "Despesas obrigatórias de caráter continuado correspondem a",
+      "alternativas": {
+        "A": "despesas inerciais.",
+        "B": "despesas vedadas no último ano.",
+        "C": "despesa corrente derivada de lei com obrigação por período superior a dois exercícios.",
+        "D": "despesas criadas apenas por lei formal.",
+        "E": "gastos mínimos constitucionais."
+      },
+      "gabarito": "C",
+      "fonte_gabarito": "Art. 17 da LRF",
+      "comentario_admin": "A definição legal exige obrigação por período superior a dois exercícios.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    },
+    {
+      "id": 20,
+      "area": "Administração Financeira e Orçamentária",
+      "tema": "Lei de Responsabilidade Fiscal",
+      "subtema": "Receita Pública",
+      "ano": 2025,
+      "banca": "CESPE/CEBRASPE",
+      "orgao": "CAU-MG",
+      "prova": "CESPE / CEBRASPE - 2025 - CAU-MG - Assistente Administrativo e Financeiro",
+      "enunciado": "O aumento permanente de receita resume-se à criação de tributo ou contribuição e à majoração de alíquotas.",
+      "alternativas": {
+        "A": "Certo",
+        "B": "Errado"
+      },
+      "gabarito": "B",
+      "fonte_gabarito": "Art. 14 da LRF",
+      "comentario_admin": "A LRF admite outras formas de aumento permanente de receita.",
+      "estatisticas": { "respondida": 0, "acertos": 0, "erros": 0 }
+    }
+  ]
+}
 
 
-]
 
 
 
